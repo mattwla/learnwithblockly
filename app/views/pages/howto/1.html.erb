@@ -1,0 +1,26 @@
+<%#PROVIDE TITLE%>
+<xml id="toolbox" style="display: none">
+  <block type="controls_if"></block>
+  <block type="controls_repeat_ext"></block>
+  <block type="logic_compare"></block>
+  <block type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="text"></block>
+  <block type="text_print"></block>
+</xml>
+
+
+<div id="puzzle-description">
+<span> Can you make the answer = 0? </span>
+</div>
+
+
+<div id="blocklyDiv"></div>
+
+
+
+
+<script>
+  var workspace = Blockly.inject('blocklyDiv',
+      {toolbox: document.getElementById('toolbox')});
+</script>

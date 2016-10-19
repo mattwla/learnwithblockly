@@ -3,9 +3,20 @@
 <h2>Programming puzzles for everyone </h2>
 <hr>
 <div id="choice-container">
-<div id="basics" class="icon">  <%=image_tag "howto.png" %><span class="caption">Learn the basics<span> </div>
-<div id="beginner" class="icon"> <%=image_tag "beginner.png"%><span class="caption">Beginner challenges</span> </div>
-<div id="advanced" class="icon"> <%=image_tag "advanced.png"%><span class="caption">Advanced challenges</span> </div>
+<div id="basics" class="icon">
+
+<%= link_to(page_path('howto/1')) do %>
+<div class="icon-outline"><span class="caption">Learn the basics</span> </div> 
+<%=image_tag "howto.png"%>
+
+<% end %>
+</div>
+<div id="beginner" class="icon"> 
+<div class="icon-outline"><span class="caption">Beginner challenges</span> </div> 
+<%=image_tag "beginner.png"%></div>
+<div id="advanced" class="icon"> 
+<div class="icon-outline"><span class="caption">Advanced challenges</span></div> 
+<%=image_tag "advanced.png"%> </div>
 </div>
 
 </div>
