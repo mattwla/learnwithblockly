@@ -112,14 +112,14 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -30px;
+
 
 	@media only screen and (max-width : 1000px) {
 		top: -15px;
 	}
 @media only screen and (min-width : 1000px) {
-	font-size: 1.8em;
-	text-decoration: underline;
+	
+	bottom: -10px;
 }
 	
 	 }
