@@ -1,11 +1,4 @@
-var INPUT = {
-    input: 2,
-    input_array: [2,3,4,5]
- };
-
-
-	var correct = 0;
-
+var correct = 0;
 
   function showCode() {
       // Generate JavaScript code and display it.
@@ -16,11 +9,15 @@ var INPUT = {
 
     function runCode() {
 
+    
+
     	var rootBlock = null;
+  
   var blocks = workspace.getTopBlocks(false);
   for (var i = 0, block; block = blocks[i]; i++) {
     if (block.type == 'answer') {
       rootBlock = block;
+      var coord = block.getRelativeToSurfaceXY();
     }
   }
   var output = NaN;
@@ -30,6 +27,8 @@ var INPUT = {
       window.LoopTrap = 1000;
       Blockly.JavaScript.INFINITE_LOOP_TRAP =
           'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+
+      document.getElementById("coord").innerHTML = coord.x + " " + coord.y;     
     
       
 
@@ -48,12 +47,16 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
       }
           var output = 0;
     output = eval(code);
-    /*document.getElementById("output").innerHTML = output; 
+    //document.getElementById("output").innerHTML = output; 
+    
     document.getElementById("output" + (i+1)).innerHTML = output; 
     if (output === correct) {
     	document.getElementById("grade" + (i+1)).innerHTML = "correct!"; 
-    };*/
+    };
   };
 };
+
+  
+
 
     

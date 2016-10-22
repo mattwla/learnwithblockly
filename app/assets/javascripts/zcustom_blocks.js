@@ -48,11 +48,11 @@ Blockly.Blocks['get_input'] = {
 
 
 
-/*Blockly.JavaScript['answer'] = function(block) {
+Blockly.JavaScript['answer'] = function(block) {
     var argument0 = Blockly.JavaScript.valueToCode(block, 'answer',
       Blockly.JavaScript.ORDER_ASSIGNMENT) || 'NaN';
   return argument0 + ';';
-};*/
+};
 
 Blockly.JavaScript['block_8'] = function(block) {
 

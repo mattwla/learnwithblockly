@@ -184,18 +184,57 @@ body {
 
 #blocklyDiv {
 
-	width: 100%;
+	width: 70%;
 height: 480px; 
+display: inline-block;
+float: left;
 
 
 }
 
+#inputDiv {
+	background-color: white;
+	width: 70%;
+	/*margin-left: auto;
+		margin-right: auto;*/
+
+}
+
+#outputDiv {
+
+	
+	display: inline-block;
+	float: left;
+	border-radius: 20px;
+	width: 25%;
+	text-align: center;
+
+	button {
+		display: inline-block;
+		width: 90%;
+		background-color: #c14545;
+		border-radius: 10px;
+		height: 2em;
+		font-size: 1.5em;
+	}
+	
+
+	table {
+		background-color: white;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		border-radius: 10px;
+		margin-top: 10px;
+	}
+}
+
 #puzzle-description {
-	width: 90%;
+	width: 70%;
 	border-radius: 20px;
 	height: 50px;
 	background-color: white;
-	margin: 5px auto;
+	/*margin: 5px auto;*/
 
 	span {
 		padding-left: 20px;
