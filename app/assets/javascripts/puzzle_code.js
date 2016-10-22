@@ -9,14 +9,18 @@ var correct = 0;
 
     function runCode() {
 
-    
+     
 
     	var rootBlock = null;
-  
-  var blocks = workspace.getTopBlocks(false);
+  //why do I get all here and not get by id?
+  var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
     if (block.type == 'answer') {
       rootBlock = block;
+      var rootCoord = block.getRelativeToSurfaceXY();
+      
+    }
+    else if (block.type == 'get_input') {
       var coord = block.getRelativeToSurfaceXY();
     }
   }
@@ -27,6 +31,10 @@ var correct = 0;
       window.LoopTrap = 1000;
       Blockly.JavaScript.INFINITE_LOOP_TRAP =
           'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+
+          //Input to output animation
+
+  
 
       document.getElementById("coord").innerHTML = coord.x + " " + coord.y;     
     
@@ -48,6 +56,32 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
           var output = 0;
     output = eval(code);
     //document.getElementById("output").innerHTML = output; 
+
+        $("#input-list" ).animate({ "left": "+="+(coord.x + 100), "top": "+="+(coord.y+40) }, "slow", function() {
+
+        $( "#input-list" ).fadeOut("slow", function () {
+           document.getElementById("input-list").innerHTML = output; 
+
+            $("#input-list" ).animate({ "left": "-="+(coord.x + 100), "top": "-="+(coord.y+40) }, 0, function() {
+
+              $("#input-list" ).animate({ "left": "+="+(rootCoord.x + 130), "top": "+="+(rootCoord.y+45) }, 0, function() {
+                  
+                  $( "#input-list" ).fadeIn({queue: false, duration: "fast"});
+
+                      $("#input-list" ).animate({"top": "-=20"}, "slow", function() {
+
+                      //});
+
+
+
+                      });
+                   });
+
+
+                });  
+        });
+    });   
+   
     
     document.getElementById("output" + (i+1)).innerHTML = output; 
     if (output === correct) {
