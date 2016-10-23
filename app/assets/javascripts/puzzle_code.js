@@ -19,12 +19,7 @@ var correct = 0;
   for (var i = 0, block; block = blocks[i]; i++) {
     if (block.type == 'answer') {
       rootBlock = block;
-      var rootCoord = block.getRelativeToSurfaceXY();
-      
     }
-    /*else if (block.type == 'get_input') {
-      var coord = block.getRelativeToSurfaceXY();
-    }*/
   }
   var output = NaN;
   Blockly.JavaScript.init(workspace);
@@ -34,18 +29,10 @@ var correct = 0;
       Blockly.JavaScript.INFINITE_LOOP_TRAP =
           'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
 
-          //Input to output animation
-
-  
-
-      //document.getElementById("coord").innerHTML = coord.x + " " + coord.y;     
+      for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
     
-      
-
-for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
-    
-  INPUT.input = INPUT.input_array[i];
-    var code = Blockly.JavaScript.workspaceToCode(workspace);
+      INPUT.input = INPUT.input_array[i];
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
 
@@ -59,16 +46,7 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
     output = eval(code);
     OUTPUT.output_array[i] = output;
     //document.getElementById("output").innerHTML = output; 
-
     
-
-    
-    
-
-    document.getElementById("output" + (i+1)).innerHTML = output; 
-    if (output === correct) {
-    	document.getElementById("grade" + (i+1)).innerHTML = "correct!"; 
-    };
   };
 
     //need to make this a choice, need to also delay painting of table, and also dynamically build table.
@@ -139,7 +117,11 @@ function runAnimation() {
 
                             $( "#input-list" + count).fadeOut("slow", function () {
 
-
+                          document.getElementById("output" + (count+1)).innerHTML = OUTPUT.output_array[count]; 
+                          if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
+                            document.getElementById("grade" + (count+1)).innerHTML = "correct!"; 
+                            };
+                          
                           $( "#input-list" + count).remove();
                           $('#inputs span').first().remove();
                           if (count < (INPUT.input_array.length - 1)) {
