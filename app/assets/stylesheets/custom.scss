@@ -127,8 +127,12 @@
 	}
 
 	.howto-img {
-		position: relative;
-		top: 10px;
+		
+		top: 20px;
+	}
+
+	.beginner-img {
+
 	}
 
 	@media only screen and (max-width : 1000px) {
@@ -183,6 +187,10 @@
 	bottom: 0px;
 }
 	
+
+	@media only screen and (min-width : 600px) and (max-width : 1000px){
+		font-size: 2em;
+	}
 	 }
 
 .caption-howto {
