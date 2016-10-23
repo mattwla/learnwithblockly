@@ -97,7 +97,16 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
 
 }
 
+function winScreen() {
+
+  $("#winscreenDiv").animate({"top": "+=450px" }, "slow", function() {
+  });
+
+}
+
 function runAnimation() {
+
+
 
     var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
@@ -111,6 +120,7 @@ function runAnimation() {
   }
    
   var count = 0;
+  var correct = 0;
     //while (count < INPUT.input_array.length) {
     function animationLoop(count) {
 
@@ -140,6 +150,7 @@ function runAnimation() {
                           document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
                           if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
                             document.getElementById("grade" + count).innerHTML = "correct!"; 
+                            correct++;
                             } else {
                               document.getElementById("grade" + count).innerHTML = ""; 
                             };
@@ -153,6 +164,9 @@ function runAnimation() {
                           } else {
                             //bring all input spand back for next try
                                displayInputs();
+                               if (CORRECT_OUTPUT.output_array.length == correct) {
+                                winScreen();
+                               }
 
 
                           }
