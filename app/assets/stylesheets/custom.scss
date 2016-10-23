@@ -16,6 +16,11 @@
 	padding-top: 10px;
 	z-index: 10;
 	position: relative;
+
+	@media only screen and (max-width : 1000px) {
+		font-size: 1em;
+	}
+
 }
 
 #header-title {
@@ -28,6 +33,10 @@
 	width: 100%;
 	text-align: center;
 	z-index: 1;
+	@media only screen and (max-width : 1000px) {
+		font-size: 1em;
+		text-align: right;
+	}
 
 }
 
@@ -203,10 +212,17 @@
 
 
 body {
-	width: 100%;
-	margin: 0;
+	
 	background-color: #74a6f7;
+
+
+		width: 100%;
+	margin: 0;
+
+	
+
 }
+
 
 #puzzle-container {
 
@@ -221,6 +237,9 @@ body {
 height: 480px; 
 display: inline-block;
 float: left;
+@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
 
 
 }
@@ -252,6 +271,11 @@ float: left;
 	width: 25%;
 	text-align: center;
 
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+
+
 	button {
 		display: inline-block;
 		width: 90%;
@@ -259,6 +283,8 @@ float: left;
 		border-radius: 10px;
 		height: 2em;
 		font-size: 1.5em;
+		
+
 	}
 	
 
@@ -290,6 +316,10 @@ float: left;
 	span {
 		padding-left: 20px;
 	}
+@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+
 
 
 }
@@ -307,6 +337,10 @@ float: left;
   border-radius: 20px;
   top: -400px;
   /*display: hidden;*/
+  @media only screen and (max-width : 1000px) {
+		top: -900px;
+	}
+
 }
 
 #winscreenHeaderContainer {
