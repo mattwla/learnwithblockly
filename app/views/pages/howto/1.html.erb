@@ -29,13 +29,14 @@
 <div id="blocklyDiv"></div>
 <div id="outputDiv">
  <button onclick="runCode()">Run Code!</button>
+
+ <%#this can be partial %>
 <table id="output-table">
 		<tr>
 	<th>Input</th>
 	<th>Output</th>
 	<th id="correct-th">Correct?</th>
 	</tr>
-
 </table>
 </div>
 
@@ -48,10 +49,10 @@
 
 var INPUT = {
     input: 0, //init a current input
-    input_array: [2, 3, 4, 5] //list of test cases
+    input_array: [2, 3, 4] //list of test cases
  };
 	var CORRECT_OUTPUT = {
- 	output_array: [8, 9, 10, 11], //what test case should output as
+ 	output_array: [8, 9, 10], //what test case should output as
  
  }
 

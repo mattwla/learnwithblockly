@@ -140,6 +140,8 @@ function runAnimation() {
                           document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
                           if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
                             document.getElementById("grade" + count).innerHTML = "correct!"; 
+                            } else {
+                              document.getElementById("grade" + count).innerHTML = ""; 
                             };
                           //remove input span element, and remove comma
                           $( "#input-list" + count).remove();
