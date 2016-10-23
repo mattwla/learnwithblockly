@@ -1,16 +1,10 @@
 <%#PROVIDE TITLE%>
 
-<p id="coord"> coord </p>
+
 
 <xml id="toolbox" style="display: none">
-  <block type="controls_if"></block>
-  <block type="controls_repeat_ext"></block>
-  <block type="logic_compare"></block>
-  <block type="math_number"></block>
   <block type="math_arithmetic"></block>
-  <block type="text"></block>
-  <block type="text_print"></block>
-  <block type="answer"></block>
+	<block type="answer"></block>
   <block type="block_8"></block>
   <block type="block_6"></block>
    <block type="get_input"></block>
@@ -19,11 +13,11 @@
 
 
 <div id="puzzle-description">
-<span> Can you make the answer = 0? </span>
+<span> Can you add six to every input?</span>
 </div>
 
 <div id="inputDiv">
-<h2> Inputs: <span id="input-list">input</span></h2>
+<h2 id="inputs"> Inputs: </h2>
 </div>
 
 
@@ -72,10 +66,23 @@
 
 var INPUT = {
     input: 2,
-    input_array: [2]
+    input_array: [2, 3, 4, 5]
  };
 
-   document.getElementById("input-list").innerHTML = INPUT.input; 
+ var CORRECT_OUTPUT = {
+ 	output_array: [8, 9, 10, 11],
+ 	count: 0
+ }
+
+ var OUTPUT = {
+ 	output_array: []
+ }
+
+
+displayInputs();
+   //document.getElementById("input-list").innerHTML = INPUT.input; 
+
+
 
 
 
