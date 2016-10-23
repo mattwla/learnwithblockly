@@ -99,7 +99,7 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
 
 function winScreen() {
 
-  $("#winscreenDiv").animate({"top": "+=450px" }, "slow", function() {
+  $("#winscreenDiv").animate({"top": "+=550px" }, "slow", function() {
   });
 
 }
