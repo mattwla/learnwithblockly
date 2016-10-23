@@ -140,12 +140,21 @@
 
 	}
 
-		@media only screen and (min-width : 500px) and (max-width : 1000px){
+	@media only screen and (min-width : 600px) and (max-width : 1000px){
 		top: 20px;
 		display: block;
 		margin: auto;
 		width: 80%;
-		height: 130px;
+		height: 200px;
+
+	}
+
+		@media only screen and (min-width : 300px) and (max-width : 600px){
+		top: 20px;
+		display: block;
+		margin: auto;
+		width: 80%;
+		height: 100px;
 
 	}
 }
