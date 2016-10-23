@@ -29,31 +29,13 @@
 <div id="blocklyDiv"></div>
 <div id="outputDiv">
  <button onclick="runCode()">Run Code!</button>
-<table>
+<table id="output-table">
 		<tr>
 	<th>Input</th>
 	<th>Output</th>
+	<th id="correct-th">Correct?</th>
 	</tr>
-<tr>
-	<td>2</td>
-	<td id="output1"> </td>
-	<td id="grade1"> </td>
-</tr>
-<tr>
-	<td>3</td>
-	<td id="output2"> </td>
-	<td id="grade2"> </td>
-</tr>
-<tr>
-	<td>4</td>
-	<td id="output3"> </td>
-	<td id="grade3"> </td>
-</tr>
-<tr>
-	<td>5</td>
-	<td id="output4"> </td>
-	<td id="grade4"> </td>
-</tr>
+
 </table>
 </div>
 
@@ -65,25 +47,20 @@
       {toolbox: document.getElementById('toolbox')});
 
 var INPUT = {
-    input: 2,
-    input_array: [2, 3, 4, 5]
+    input: 0, //init a current input
+    input_array: [2, 3, 4, 5] //list of test cases
  };
-
- var CORRECT_OUTPUT = {
- 	output_array: [8, 9, 10, 11],
- 	count: 0
+	var CORRECT_OUTPUT = {
+ 	output_array: [8, 9, 10, 11], //what test case should output as
+ 
  }
 
  var OUTPUT = {
- 	output_array: []
+ 	output_array: [] //init an array to store code output runs
  }
 
-
-displayInputs();
-   //document.getElementById("input-list").innerHTML = INPUT.input; 
-
-
-
+buildTable();
+displayInputs(); //fill the input element with inputs
 
 
 </script>

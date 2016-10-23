@@ -238,6 +238,14 @@ float: left;
 		border-radius: 10px;
 		margin-top: 10px;
 	}
+
+	#correct-th {
+
+	}
+
+	td:nth-child(2) {
+		color: green;
+	}
 }
 
 #puzzle-description {

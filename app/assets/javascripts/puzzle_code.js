@@ -77,6 +77,26 @@ for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
 
 }
 
+function buildTable() {
+
+  var tableDiv = document.getElementById("output-table");
+
+for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
+
+  var tr = document.createElement('tr');
+  tr.innerHTML = INPUT.input_array[i];
+  var newtr = tableDiv.appendChild(tr);
+  var newtd1 = document.createElement('td');
+  newtd1.id = "output" + i;
+  var newtd2 = document.createElement('td');
+  newtd2.id = "grade" + i;
+  newtr.appendChild(newtd1);
+  newtr.appendChild(newtd2);
+
+}
+
+}
+
 function runAnimation() {
 
     var blocks = workspace.getAllBlocks();
@@ -116,12 +136,12 @@ function runAnimation() {
                       $("#input-list" + count).animate({"top": "-=20"}, "slow", function() {
 
                             $( "#input-list" + count).fadeOut("slow", function () {
-
-                          document.getElementById("output" + (count+1)).innerHTML = OUTPUT.output_array[count]; 
+                              //fill out the chart now
+                          document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
                           if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
-                            document.getElementById("grade" + (count+1)).innerHTML = "correct!"; 
+                            document.getElementById("grade" + count).innerHTML = "correct!"; 
                             };
-                          
+                          //remove input span element, and remove comma
                           $( "#input-list" + count).remove();
                           $('#inputs span').first().remove();
                           if (count < (INPUT.input_array.length - 1)) {
@@ -129,6 +149,7 @@ function runAnimation() {
                           animationLoop(count);
                           
                           } else {
+                            //bring all input spand back for next try
                                displayInputs();
 
 
