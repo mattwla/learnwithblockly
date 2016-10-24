@@ -126,9 +126,9 @@ function runAnimation() {
 
 
         //need to offset by count, to adjust for locations of input array spans
-        $("#input-list" + count).animate({ "left": "+="+(coord.x + 100), "top": "+="+(coord.y+40) }, "slow", function() {
+        $("#input-list" + count).animate({ "left": "+="+(coord.x + 80), "top": "+="+(coord.y+45) }, "slow", function() {
 
-        $( "#input-list" + count).fadeOut("slow", function () {
+        $( "#input-list" + count).fadeOut("fast", function () {
            document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
            if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
             $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
@@ -137,13 +137,13 @@ function runAnimation() {
            }
 
 
-            $("#input-list" + count).animate({ "left": "-="+(coord.x + 100), "top": "-="+(coord.y+40) }, 0, function() {
+            $("#input-list" + count).animate({ "left": "-="+(coord.x + 80), "top": "-="+(coord.y+45) }, 0, function() {
 
-              $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 120), "top": "+="+(rootCoord.y+45) }, 0, function() {
+              $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 80), "top": "+="+(rootCoord.y+45) }, 0, function() {
                   
                   $( "#input-list" + count).fadeIn({queue: true, duration: "fast"});
 
-                      $("#input-list" + count).animate({"top": "-=20"}, "slow", function() {
+                      $("#input-list" + count).animate({"top": "-=40"}, "slow", function() {
 
                             $( "#input-list" + count).fadeOut("slow", function () {
                               //fill out the chart now
