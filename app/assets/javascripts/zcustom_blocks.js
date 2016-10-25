@@ -1,11 +1,12 @@
-Blockly.Blocks['answer'] = {
+Blockly.Blocks['output'] = {
   init: function() {
-    this.appendValueInput("answer")
+    this.appendValueInput("output")
         .setCheck(null)
-        .appendField("answer");
+        .appendField("output");
     this.setColour(210);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');
+    
   }
 };
 
@@ -48,8 +49,8 @@ Blockly.Blocks['get_input'] = {
 
 
 
-Blockly.JavaScript['answer'] = function(block) {
-    var argument0 = Blockly.JavaScript.valueToCode(block, 'answer',
+Blockly.JavaScript['output'] = function(block) {
+    var argument0 = Blockly.JavaScript.valueToCode(block, 'output',
       Blockly.JavaScript.ORDER_ASSIGNMENT) || 'NaN';
   return argument0 + ';';
 };

@@ -17,7 +17,7 @@ var correct = 0;
   //why do I get all here and not get by id?
   var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
-    if (block.type == 'answer') {
+    if (block.type == 'output') {
       rootBlock = block;
     }
   }
@@ -110,7 +110,7 @@ function runAnimation() {
 
     var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
-    if (block.type == 'answer') {
+    if (block.type == 'output') {
       rootCoord = block.getRelativeToSurfaceXY();
     }
    

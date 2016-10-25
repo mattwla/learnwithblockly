@@ -4,10 +4,10 @@
 
 <xml id="toolbox" style="display: none">
   <block type="math_arithmetic"></block>
-	<block type="answer"></block>
+	
   <block type="block_8"></block>
   <block type="block_6"></block>
-   <block type="get_input"></block>
+  
 
 </xml>
 
@@ -68,6 +68,17 @@ var INPUT = {
  var OUTPUT = {
  	output_array: [] //init an array to store code output runs
  }
+
+//set starting, non-deletable, block here.
+var defaultXml =
+      '<xml>' +
+      '  <block type="output" deletable="false" x="70" y="70">' +
+      '  </block>' +
+      '  <block type="get_input" deletable="false" x="70" y="150">' +
+      '  </block>' +
+      '</xml>';
+ var xml = Blockly.Xml.textToDom(defaultXml);
+    Blockly.Xml.domToWorkspace(xml, workspace);
 
 buildTable();
 displayInputs(); //fill the input element with inputs
