@@ -6,7 +6,9 @@ Blockly.Blocks['output'] = {
     this.setColour(210);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');
-    
+    //this.setPreviousStatement(true, null);
+
+
   }
 };
 

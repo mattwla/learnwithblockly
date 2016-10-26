@@ -121,12 +121,24 @@ function runAnimation() {
    
   var count = 0;
   var correct = 0;
+  
+//calculate how much input must travel depenidng on presence of categories in toolbox
+  if (workspace.toolbox_ == null) {
+    var xoffset = workspace.flyout_.getWidth() - 55;
+  } else {
+    var xoffset = workspace.toolbox_.getWidth() - 55;
+  }
+
+
+
     //while (count < INPUT.input_array.length) {
     function animationLoop(count) {
 
+   
+
 
         //need to offset by count, to adjust for locations of input array spans
-        $("#input-list" + count).animate({ "left": "+="+(coord.x + 80), "top": "+="+(coord.y+45) }, "slow", function() {
+        $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
 
         $( "#input-list" + count).fadeOut("fast", function () {
            document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
