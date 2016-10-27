@@ -106,7 +106,7 @@ function winScreen() {
 
 function runAnimation() {
 
-
+  var coords_arr = []
 
     var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
@@ -115,7 +115,7 @@ function runAnimation() {
     }
    
     else if (block.type == 'get_input') {
-      var coord = block.getRelativeToSurfaceXY();
+      coords_arr.push(block.getRelativeToSurfaceXY() );
     }
   }
    
@@ -129,19 +129,31 @@ function runAnimation() {
     var xoffset = workspace.toolbox_.getWidth() - 55;
   }
 
+  function animateExtraInputs(count) {
+      for (var anim = 1; anim < (coords_arr.length); anim++ ) {
+        var clone = $("#input-list" + count).clone();
+        clone.appendTo($("#inputs"));
+          clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
+
+      });
+
+  }
+}
+
 
 
     //while (count < INPUT.input_array.length) {
     function animationLoop(count) {
-
-   
-
+      var coord = coords_arr[0];
+  animateExtraInputs(count);
 
         //need to offset by count, to adjust for locations of input array spans
         $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
-
+              
         $( "#input-list" + count).fadeOut("fast", function () {
+           
            document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
+           
            if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
             $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
            } else {
@@ -182,21 +194,13 @@ function runAnimation() {
 
 
                           }
-
-                        });
-
-                  
-
-
-                      });
+                     });
                    });
-
-
-                });  
-        });
-    });   
-                   
-  }
+                });
+              });  
+            });
+          });   
+         }
 
                      animationLoop(count);
                     
