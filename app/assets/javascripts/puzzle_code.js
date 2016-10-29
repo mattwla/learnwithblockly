@@ -62,12 +62,16 @@ function displayInputs() {
 for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
     var comma =    document.createElement('span');
   comma.innerHTML = ", "
+  
+  var gc = document.createElement('div');
+  gc.id = 'input-container' + i;
   var g = document.createElement('span');
   g.id = 'input-list' + i;
   
   g.innerHTML = INPUT.input_array[i]
-  var g2 = inputDiv.appendChild(g);
-  g2.classname = 'input';
+  var g2 = inputDiv.appendChild(gc);
+  gc.appendChild(g)
+ 
   
   if (i != len - 1 ) {
   inputDiv.appendChild(comma);
@@ -132,9 +136,12 @@ function runAnimation() {
   function animateExtraInputs(count) {
       for (var anim = 1; anim < (coords_arr.length); anim++ ) {
         var clone = $("#input-list" + count).clone();
-        clone.appendTo($("#inputs"));
+        clone.appendTo($("#input-container" + count));
           clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
+            clone.fadeOut("fast", function () {
+              clone.remove();
 
+            });
       });
 
   }
@@ -149,7 +156,7 @@ function runAnimation() {
 
         //need to offset by count, to adjust for locations of input array spans
         $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
-              
+            //$(this).stop(false, true);
         $( "#input-list" + count).fadeOut("fast", function () {
            
            document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
@@ -180,13 +187,15 @@ function runAnimation() {
                             };
                           //remove input span element, and remove comma
                           $( "#input-list" + count).remove();
-                          $('#inputs span').first().remove();
+                          $("#input-container" + count).remove();
+                          $('#inputs span').first().remove(); //remove the comma span
                           if (count < (INPUT.input_array.length - 1)) {
                           count++;
                           animationLoop(count);
                           
                           } else {
                             //bring all input spand back for next try
+
                                displayInputs();
                                if (CORRECT_OUTPUT.output_array.length == correct) {
                                 winScreen();

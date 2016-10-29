@@ -250,6 +250,12 @@ float: left;
 	/*margin-left: auto;
 		margin-right: auto;*/
 
+		div {
+			display: inline-block;
+			position: relative;
+	z-index: 10;
+		}
+
 		span {
 			position: relative;
 	z-index: 10;
@@ -261,6 +267,7 @@ float: left;
 #input-list {
 }
 	
+
 
 #outputDiv {
 
