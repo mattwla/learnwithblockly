@@ -1,37 +1,22 @@
 <%#PROVIDE TITLE%>
-<% provide(:title, "Test: Puzzle 2") %>
+<% provide(:title, "How-To: Puzzle 1") %>
 
 
 <xml id="toolbox" style="display: none">
-
-<category name="Category 1">
-    <block type="controls_repeat_ext">
-      <value name="TIMES">
-        <shadow type="math_number">
-          <field name="NUM">10</field>
-        </shadow>
-      </value>
-    </block>
-     <block type="block_8"></block>
-       <block type="math_arithmetic"></block>
-  <block type="block_6"></block>
-  <block type="get_input"></block>
-    <block type="variables_set">
-      <field name="VAR">x</field>
-    </block>
-  </category>
-  <category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
-
+  <block type="math_arithmetic"></block>
 	
- 
+  <block type="block_8"></block>
+  <block type="block_6"></block>
   
 
 </xml>
 
 
 <div id="puzzle-description">
-<span> Can you calculate the factorial of each input? (for example, the factorial of 4 is 4*3*3*1 = 24)</span>
+<span id="desc-span"> Can you add six to every input?</span>
 </div>
+
+
 
 <div id="inputDiv">
 <h2 id="inputs"> Inputs: </h2>
@@ -71,14 +56,14 @@
 
 <script>
   var workspace = Blockly.inject('blocklyDiv',
-      {toolbox: document.getElementById('toolbox'), trashcan: true, scrollbars: false});
+      {toolbox: document.getElementById('toolbox')});
 
 var INPUT = {
     input: 0, //init a current input
-    input_array: [4, 8] //list of test cases
+    input_array: [2, 3, 4] //list of test cases
  };
 	var CORRECT_OUTPUT = {
- 	output_array: [24, 40320], //what test case should output as
+ 	output_array: [8, 9, 10], //what test case should output as
  
  }
 
@@ -89,10 +74,10 @@ var INPUT = {
 //set starting, non-deletable, block here.
 var defaultXml =
       '<xml>' +
-      '  <block type="output" deletable="false" x="350" y="35">' +
+      '  <block type="output" deletable="false" x="70" y="70">' +
       '  </block>' +
-     /* '  <block type="get_input" deletable="false" x="35" y="80">' +
-      '  </block>' +*/
+      '  <block type="get_input" deletable="false" x="70" y="150">' +
+      '  </block>' +
       '</xml>';
  var xml = Blockly.Xml.textToDom(defaultXml);
     Blockly.Xml.domToWorkspace(xml, workspace);
@@ -102,3 +87,4 @@ displayInputs(); //fill the input element with inputs
 
 
 </script>
+

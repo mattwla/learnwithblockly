@@ -218,6 +218,116 @@ function runAnimation() {
    
 }
 
+function runDemoAnimation() {
+
+  var coords_arr = []
+
+    var blocks = workspace.getAllBlocks();
+  for (var i = 0, block; block = blocks[i]; i++) {
+    if (block.type == 'output') {
+      rootCoord = block.getRelativeToSurfaceXY();
+    }
+   
+    else if (block.type == 'get_input') {
+      coords_arr.push(block.getRelativeToSurfaceXY() );
+    }
+  }
+   
+  var count = 0;
+  var correct = 0;
+  
+//calculate how much input must travel depenidng on presence of categories in toolbox
+  if (workspace.toolbox_ == null) {
+    var xoffset = workspace.flyout_.getWidth() - 55;
+  } else {
+    var xoffset = workspace.toolbox_.getWidth() - 55;
+  }
+
+  function animateExtraInputs(count) {
+      for (var anim = 1; anim < (coords_arr.length); anim++ ) {
+        var clone = $("#input-list" + count).clone();
+        clone.appendTo($("#input-container" + count));
+          clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
+            clone.fadeOut("fast", function () {
+              clone.remove();
+
+            });
+      });
+
+  }
+}
+
+
+
+    //while (count < INPUT.input_array.length) {
+    function animationLoop(count) {
+      var coord = coords_arr[0];
+  animateExtraInputs(count);
+
+        //need to offset by count, to adjust for locations of input array spans
+        $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
+            //$(this).stop(false, true);
+        $( "#input-list" + count).fadeOut("fast", function () {
+           
+           document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
+           
+           if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
+            $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
+           } else {
+            $("#input-list" + count).css('color', 'red');
+           }
+
+
+            $("#input-list" + count).animate({ "left": "-="+(coord.x + 80), "top": "-="+(coord.y+45) }, 0, function() {
+
+              $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 80), "top": "+="+(rootCoord.y+45) }, 0, function() {
+                  
+                  $( "#input-list" + count).fadeIn({queue: true, duration: "fast"});
+
+                      $("#input-list" + count).animate({"top": "-=40"}, "slow", function() {
+
+                            $( "#input-list" + count).fadeOut("slow", function () {
+                              //fill out the chart now
+                          document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
+                          if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
+                            document.getElementById("grade" + count).innerHTML = "correct!"; 
+                            correct++;
+                            } else {
+                              document.getElementById("grade" + count).innerHTML = ""; 
+                            };
+                          //remove input span element, and remove comma
+                          $( "#input-list" + count).remove();
+                          $("#input-container" + count).remove();
+                          $('#inputs span').first().remove(); //remove the comma span
+                          if (count < (INPUT.input_array.length - 1)) {
+                          count++;
+                          animationLoop(count);
+                          
+                          } else {
+                            //bring all input spand back for next try
+
+                               displayInputs();
+                               if (CORRECT_OUTPUT.output_array.length == correct) {
+                                winScreen();
+                               }
+
+
+                          }
+                     });
+                   });
+                });
+              });  
+            });
+          });   
+         }
+
+                     animationLoop(count);
+                    
+
+
+   
+}
+
   
 
 
