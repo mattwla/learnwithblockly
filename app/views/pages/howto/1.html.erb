@@ -1,41 +1,56 @@
 <% provide(:title, "How-To: 1") %>
-
-
+<div id="demo-container">
 <div id="inputDiv" class="demo-inputs">
-<h2 id="inputs"> Inputs: </h2>
+	<h2 id="inputs" class="input-span"> Input = </h2>
+	<h2 id="output-demo"> Output =  <span id="demo-output-value">?</span></h2>
+
+</div>
+<div id="computerDiv">
+	<span id="computer-title">+1 PROGRAM</span>
+	<div id="computer-output"></div>
 </div>
 
-<div id="computerDiv"><span>COMPUTER</span></div>
-<div id="outputDiv">
-<table id="output-table">
-		<tr>
-	<th>Input</th>
-	<th>Output</th>
-	<th id="correct-th">Correct?</th>
-	</tr>
-</table>
+<div id="demoscreenDiv">
+	<div id="winscreenHeaderContainer">
+		<h1 id="winscreenHeader">Computer programs take in <span class="input-span"><span class="underline-span">in</span>puts</span>, and turn them into <span class="output-span"><span class="underline-span">out</span>puts</span>, press play to watch!</h1>
+	</div>
+ 	<button class="demo-button" onclick="hideDemoScreen()">PLAY!</button>
+ 	<%=button_to "Next Lesson", page_path('howto/2/'), class: "demo-button button-hidden"%>
+</div>
+
 </div>
 
 <script>
-
-
 var INPUT = {
     input: 0, //init a current input
-    input_array: [2, 3, 4] //list of test cases
- };
-	var CORRECT_OUTPUT = {
- 	output_array: [3, 4, 5], //what test case should output as
- 
- }
-
- var OUTPUT = {
- 	output_array: [] //init an array to store code output runs
- }
-
+    input_array: [2] //list of test cases
+};
+var CORRECT_OUTPUT = {
+ 	output_array: [3], //what test case should output as
+};
+var OUTPUT = {
+ 	output_array: [3] //init an array to store code output runs
+};
 //set starting, non-deletable, block here.
-
-buildTable();
+//buildTable();
 displayInputs(); //fill the input element with inputs
+function demoScreen() {
+	$("#demoscreenDiv").animate({"top": "+=550px" }, "slow");
+};
 
+function hideDemoScreen() {
+	$("#demoscreenDiv").animate({"top": "-=550px" }, "slow");
+  	setTimeout(function(){
+   		runDemoAnimation();
+	}, 1500);
+};
+
+function endDemoScreen() {
+  document.getElementById("winscreenHeader").innerHTML = "In the next lesson we will look at the programs code!";
+  document.getElementById("demoButton").onclick = "pages/howto/2/'";
+  demoScreen();
+}
+
+demoScreen();
 
 </script>

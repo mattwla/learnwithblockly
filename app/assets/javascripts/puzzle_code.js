@@ -1,331 +1,197 @@
 var correct = 0;
 
-  function showCode() {
-      // Generate JavaScript code and display it.
-      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-      var code = Blockly.JavaScript.workspaceToCode(workspace);
-      alert(code);
-    }
+function showCode() {
+  // Generate JavaScript code and display it.
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  alert(code);
+};
 
-    function runCode() {
-
-
-
-     
-
-    	var rootBlock = null;
-  //why do I get all here and not get by id?
+function runCode() {
+  var output = NaN;
+  var rootBlock = null;
   var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
     if (block.type == 'output') {
       rootBlock = block;
-    }
-  }
-  var output = NaN;
+    };
+  };
   Blockly.JavaScript.init(workspace);
   var code = Blockly.JavaScript.blockToCode(rootBlock);
-      // Generate JavaScript code and run it.
-      window.LoopTrap = 1000;
-      Blockly.JavaScript.INFINITE_LOOP_TRAP =
-          'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
-
-      for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
-    
-      INPUT.input = INPUT.input_array[i];
-      var code = Blockly.JavaScript.workspaceToCode(workspace);
-      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-
-
-
-      try {
-        eval(code);
+  // Generate JavaScript code and run it.
+  window.LoopTrap = 1000;
+  Blockly.JavaScript.INFINITE_LOOP_TRAP =
+  'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+  for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
+    INPUT.input = INPUT.input_array[i];
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+    try {
+      eval(code);
       } catch (e) {
-        alert(e);
-      }
-          var output = 0;
+      alert(e);
+    }
+    var output = 0;
     output = eval(code);
     OUTPUT.output_array[i] = output;
-    //document.getElementById("output").innerHTML = output; 
-    
   };
-
-    //need to make this a choice, need to also delay painting of table, and also dynamically build table.
+    //need to make this a choice.
     runAnimation();
-
 };
 
+//This takes inputs from the puzzle html.erb and puts them into the DOM
 function displayInputs() {
-
-   var inputDiv = document.getElementById("inputs");
-
-
-for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
+  var inputDiv = document.getElementById("inputs");
+  for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
     var comma =    document.createElement('span');
-  comma.innerHTML = ", "
-  
-  var gc = document.createElement('div');
-  gc.id = 'input-container' + i;
-  var g = document.createElement('span');
-  g.id = 'input-list' + i;
-  
-  g.innerHTML = INPUT.input_array[i]
-  var g2 = inputDiv.appendChild(gc);
-  gc.appendChild(g)
- 
-  
-  if (i != len - 1 ) {
-  inputDiv.appendChild(comma);
-}
-  
-  }
+    comma.innerHTML = ", ";
+    var gc = document.createElement('div');
+    gc.id = 'input-container' + i;
+    var g = document.createElement('span');
+    g.id = 'input-list' + i;
+    g.innerHTML = INPUT.input_array[i]
+    var g2 = inputDiv.appendChild(gc);
+    gc.appendChild(g);
+    if (i != len - 1 ) {
+      inputDiv.appendChild(comma);
+    };
+  };
+};
 
-}
-
+//This builds the output table, which keeps track of program outputs and grades the correctness of each.
 function buildTable() {
-
   var tableDiv = document.getElementById("output-table");
-
-for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
-
-  var tr = document.createElement('tr');
-  tr.innerHTML = INPUT.input_array[i];
-  var newtr = tableDiv.appendChild(tr);
-  var newtd1 = document.createElement('td');
-  newtd1.id = "output" + i;
-  var newtd2 = document.createElement('td');
-  newtd2.id = "grade" + i;
-  newtr.appendChild(newtd1);
-  newtr.appendChild(newtd2);
-
-}
-
-}
+  for (var i = 0, len = INPUT.input_array.length; i < len; i++) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = INPUT.input_array[i];
+    var newtr = tableDiv.appendChild(tr);
+    var newtd1 = document.createElement('td');
+    newtd1.id = "output" + i;
+    var newtd2 = document.createElement('td');
+    newtd2.id = "grade" + i;
+    newtr.appendChild(newtd1);
+    newtr.appendChild(newtd2);
+  };
+};
 
 function winScreen() {
-
-  $("#winscreenDiv").animate({"top": "+=550px" }, "slow", function() {
-  });
-
+  $("#winscreenDiv").animate({"top": "+=550px" }, "slow");
 }
 
 function runAnimation() {
-
   var coords_arr = []
-
-    var blocks = workspace.getAllBlocks();
+  var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
     if (block.type == 'output') {
       rootCoord = block.getRelativeToSurfaceXY();
-    }
-   
-    else if (block.type == 'get_input') {
-      coords_arr.push(block.getRelativeToSurfaceXY() );
+    } else if (block.type == 'get_input') {
+      coords_arr.push(block.getRelativeToSurfaceXY());
     }
   }
-   
   var count = 0;
   var correct = 0;
-  
-//calculate how much input must travel depenidng on presence of categories in toolbox
+  //calculate how much input must travel depenidng on presence of categories in toolbox
   if (workspace.toolbox_ == null) {
     var xoffset = workspace.flyout_.getWidth() - 55;
   } else {
     var xoffset = workspace.toolbox_.getWidth() - 55;
   }
-
+  
   function animateExtraInputs(count) {
-      for (var anim = 1; anim < (coords_arr.length); anim++ ) {
-        var clone = $("#input-list" + count).clone();
-        clone.appendTo($("#input-container" + count));
-          clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
-            clone.fadeOut("fast", function () {
-              clone.remove();
-
-            });
+    for (var anim = 1; anim < (coords_arr.length); anim++ ) {
+      var clone = $("#input-list" + count).clone();
+      clone.appendTo($("#input-container" + count));
+      clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
+        clone.fadeOut("fast", function () {
+        clone.remove();
+        });
       });
-
+    }
   }
-}
-
-
-
-    //while (count < INPUT.input_array.length) {
-    function animationLoop(count) {
-      var coord = coords_arr[0];
-  animateExtraInputs(count);
-
-        //need to offset by count, to adjust for locations of input array spans
-        $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
-            //$(this).stop(false, true);
-        $( "#input-list" + count).fadeOut("fast", function () {
-           
-           document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
-           
-           if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
-            $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
-           } else {
-            $("#input-list" + count).css('color', 'red');
-           }
-
-
-            $("#input-list" + count).animate({ "left": "-="+(coord.x + 80), "top": "-="+(coord.y+45) }, 0, function() {
-
-              $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 80), "top": "+="+(rootCoord.y+45) }, 0, function() {
-                  
-                  $( "#input-list" + count).fadeIn({queue: true, duration: "fast"});
-
-                      $("#input-list" + count).animate({"top": "-=40"}, "slow", function() {
-
-                            $( "#input-list" + count).fadeOut("slow", function () {
-                              //fill out the chart now
-                          document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
-                          if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
-                            document.getElementById("grade" + count).innerHTML = "correct!"; 
-                            correct++;
-                            } else {
-                              document.getElementById("grade" + count).innerHTML = ""; 
-                            };
-                          //remove input span element, and remove comma
-                          $( "#input-list" + count).remove();
-                          $("#input-container" + count).remove();
-                          $('#inputs span').first().remove(); //remove the comma span
-                          if (count < (INPUT.input_array.length - 1)) {
-                          count++;
-                          animationLoop(count);
-                          
-                          } else {
-                            //bring all input spand back for next try
-
-                               displayInputs();
-                               if (CORRECT_OUTPUT.output_array.length == correct) {
-                                winScreen();
-                               }
-
-
-                          }
-                     });
-                   });
-                });
-              });  
+  
+  function animationLoop(count) {
+    var coord = coords_arr[0];
+    animateExtraInputs(count);
+    //offset by count, to adjust for locations of input array spans
+    $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
+    $( "#input-list" + count).fadeOut("fast", function () {
+    document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
+    if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
+      $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
+    } else {
+      $("#input-list" + count).css('color', 'red');
+    }
+    $("#input-list" + count).animate({ "left": "-="+(coord.x + 80), "top": "-="+(coord.y+45) }, 0, function() {
+      $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 80), "top": "+="+(rootCoord.y+45) }, 0, function() {
+        $( "#input-list" + count).fadeIn({queue: true, duration: "fast"});
+          $("#input-list" + count).animate({"top": "-=40"}, "slow", function() {
+            $( "#input-list" + count).fadeOut("slow", function () {
+            //fill out the chart now
+              document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
+              if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
+                document.getElementById("grade" + count).innerHTML = "correct!"; 
+                correct++;
+              } else {
+                document.getElementById("grade" + count).innerHTML = ""; 
+              };
+              //remove input span element, and remove comma
+              $( "#input-list" + count).remove();
+              $("#input-container" + count).remove();
+              $('#inputs span').first().remove(); //remove the comma span
+              if (count < (INPUT.input_array.length - 1)) {
+                count++;
+                animationLoop(count);
+                } else {
+                //bring all input spand back for next try
+                displayInputs();
+                if (CORRECT_OUTPUT.output_array.length == correct) {
+                   winScreen();
+                }
+              }
             });
-          });   
-         }
-
-                     animationLoop(count);
-                    
-
-
-   
+          });
+        });
+      });  
+    });
+  });   
+}
+  animationLoop(count);
 }
 
 function runDemoAnimation() {
-
-  var coords_arr = []
-
-    var blocks = workspace.getAllBlocks();
-  for (var i = 0, block; block = blocks[i]; i++) {
-    if (block.type == 'output') {
-      rootCoord = block.getRelativeToSurfaceXY();
-    }
-   
-    else if (block.type == 'get_input') {
-      coords_arr.push(block.getRelativeToSurfaceXY() );
-    }
-  }
-   
-  var count = 0;
-  var correct = 0;
-  
-//calculate how much input must travel depenidng on presence of categories in toolbox
-  if (workspace.toolbox_ == null) {
-    var xoffset = workspace.flyout_.getWidth() - 55;
-  } else {
-    var xoffset = workspace.toolbox_.getWidth() - 55;
-  }
-
-  function animateExtraInputs(count) {
-      for (var anim = 1; anim < (coords_arr.length); anim++ ) {
-        var clone = $("#input-list" + count).clone();
-        clone.appendTo($("#input-container" + count));
-          clone.animate({ "left": "+="+(coords_arr[anim].x + xoffset), "top": "+="+(coords_arr[anim].y+45) }, "slow", function() {
-            clone.fadeOut("fast", function () {
-              clone.remove();
-
-            });
-      });
-
-  }
-}
-
-
-
-    //while (count < INPUT.input_array.length) {
+    var count = 0;
     function animationLoop(count) {
-      var coord = coords_arr[0];
-  animateExtraInputs(count);
-
-        //need to offset by count, to adjust for locations of input array spans
-        $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
-            //$(this).stop(false, true);
-        $( "#input-list" + count).fadeOut("fast", function () {
-           
-           document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
-           
-           if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {
-            $("#input-list" + count).css('color', 'green');  //right or wrong? green or red?
-           } else {
-            $("#input-list" + count).css('color', 'red');
-           }
-
-
-            $("#input-list" + count).animate({ "left": "-="+(coord.x + 80), "top": "-="+(coord.y+45) }, 0, function() {
-
-              $("#input-list" + count).animate({ "left": "+="+(rootCoord.x + 80), "top": "+="+(rootCoord.y+45) }, 0, function() {
-                  
-                  $( "#input-list" + count).fadeIn({queue: true, duration: "fast"});
-
-                      $("#input-list" + count).animate({"top": "-=40"}, "slow", function() {
-
-                            $( "#input-list" + count).fadeOut("slow", function () {
-                              //fill out the chart now
-                          document.getElementById("output" + count).innerHTML = OUTPUT.output_array[count]; 
-                          if (OUTPUT.output_array[count] === CORRECT_OUTPUT.output_array[count]) {
-                            document.getElementById("grade" + count).innerHTML = "correct!"; 
-                            correct++;
-                            } else {
-                              document.getElementById("grade" + count).innerHTML = ""; 
-                            };
-                          //remove input span element, and remove comma
-                          $( "#input-list" + count).remove();
-                          $("#input-container" + count).remove();
-                          $('#inputs span').first().remove(); //remove the comma span
-                          if (count < (INPUT.input_array.length - 1)) {
-                          count++;
-                          animationLoop(count);
-                          
-                          } else {
-                            //bring all input spand back for next try
-
-                               displayInputs();
-                               if (CORRECT_OUTPUT.output_array.length == correct) {
-                                winScreen();
-                               }
-
-
+        $("#input-list" + count).animate({ "left": "+= 50", "top": "+=300" }, 1500, function() {
+        $( "#input-list" + count).fadeOut(1000, function() {
+          document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
+          var animoutput = document.createElement('span');
+          animoutput.innerHTML = CORRECT_OUTPUT.output_array[count];
+          animoutput.id = "anim-output" + count;
+          coutput = document.getElementById("computer-output");
+          setTimeout(function(){
+          coutput.appendChild(animoutput);
+          $("#anim-output"+count).animate({"left": "+=" + (160)}, 1000, function() {
+          });
+          setTimeout(function(){
+          //remove input span element, and remove comma
+            $( "#input-list" + count).remove();
+            $("#input-container" + count).remove();
+            $('#inputs span').first().remove(); //remove the comma span
+              if (count < (INPUT.input_array.length - 1)) {
+                count++;
+                setTimeout(function(){
+                  animationLoop(count);
+                }, 1500);
+              } else {
+                displayInputs();
+                endDemoScreen();
                           }
-                     });
-                   });
-                });
-              });  
-            });
-          });   
-         }
-
-                     animationLoop(count);
-                    
-
-
-   
+          }, 1800);
+        }, 1500);
+      });
+    });
+  }
+  animationLoop(count);
 }
 
   

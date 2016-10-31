@@ -7,7 +7,6 @@
 }
 
 #logo {
-
 	text-decoration: none;
 	font-size: 1.7em;
 	color: white;
@@ -16,15 +15,12 @@
 	padding-top: 10px;
 	z-index: 10;
 	position: relative;
-
 	@media only screen and (max-width : 1000px) {
 		font-size: 1em;
 	}
-
 }
 
 #header-title {
-
 	font-size: 1.7em;
 	color: white;
 	position: absolute;
@@ -37,11 +33,9 @@
 		font-size: 1em;
 		text-align: right;
 	}
-
 }
 
 /*home page*/
-
 #hero {
 	width: 95%;
 	height: 500px;
@@ -50,107 +44,75 @@
 	position: relative;
 	top: 20px;
 	border-radius: 25px;
-
 	h1 {
 		position: relative;
 		top: 10px;
 		text-align: center;
 	}
-
 	h2 {
 		text-align: center;
 		font-style: italic;
 		font-weight: normal;
 		position: relative;
 		top: -10px;
-
 	}
-
-	@media only screen and (max-width : 1000px) {
-
-		height: auto;
-	}
-
 	hr {
 	padding: 0;
 	margin: 0;
 	}
+	@media only screen and (max-width : 1000px) {
 
- 
+		height: auto;
+	}
 }
 
 #choice-container {
 	text-align: center;
 	position: relative;
-
-
 	@media only screen and (min-width : 1000px) {
-
 		top: 20px;
 	}
-
-
-
 }
 
 .icon-outline {
 	position: absolute;
-	
 	width: 10px;
 	outline: 1.5px dashed black;
-	 left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 80%;
-  padding-bottom: 35%;
-   box-shadow: 5px 5px 5px #888888;
-
-   @media only screen and (max-width : 1000px) {
+	left: 0; 
+  	right: 0; 
+ 	margin-left: auto; 
+ 	margin-right: auto; 
+  	width: 80%;
+  	padding-bottom: 35%;
+   	box-shadow: 5px 5px 5px #888888;
+	@media only screen and (max-width : 1000px) {
    		padding-bottom: 33%;
    }
-
 }
 
 .icon {
-
-
 	width: 33%;
 	padding-bottom: 10%;
 	display: inline-block;
 	position: relative;
 	top: 30px;
-
-
-
-
 	img {
 		position: absolute;
-		 left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-   max-width: 70%;
-
-		
-	}
-
+		left: 0; 
+  		right: 0; 
+  		margin-left: auto; 
+  		margin-right: auto; 
+   		max-width: 70%;
+   	}
 	.howto-img {
-		
 		top: 20px;
 	}
-
-	.beginner-img {
-
-	}
-
 	@media only screen and (max-width : 1000px) {
 		top: 20px;
 		display: block;
 		margin: auto;
 		width: 80%;
 		height: 100px;
-
 	}
 
 	@media only screen and (min-width : 600px) and (max-width : 1000px){
@@ -159,159 +121,155 @@
 		margin: auto;
 		width: 80%;
 		height: 200px;
-
 	}
 
-		@media only screen and (min-width : 300px) and (max-width : 600px){
+	@media only screen and (min-width : 300px) and (max-width : 600px){
 		top: 20px;
 		display: block;
 		margin: auto;
 		width: 80%;
 		height: 100px;
-
 	}
 }
 
-/*#beginner, #advanced {
-
-	@media only screen and (max-width : 1000px) {
-	top: -20px;
-}
-}*/
-
 .caption {
-
-	
 	position: absolute;
 	left: 0;
 	right: 0;
-
-
-
 	@media only screen and (max-width : 1000px) {
 		bottom: 0px;
 	}
-@media only screen and (min-width : 1000px) {
-	
+	@media only screen and (min-width : 1000px) {
 	bottom: 0px;
-}
-	
-
+	}
 	@media only screen and (min-width : 600px) and (max-width : 1000px){
 		font-size: 2em;
 	}
-	 }
+}
 
 .caption-howto {
-
 	@media only screen and (max-width : 1000px) {
 		bottom: 0px;
 	}
-
 }
 
 
 body {
-	
 	background-color: #74a6f7;
-
-
-		width: 100%;
+	width: 100%;
 	margin: 0;
-
-	
-
 }
 
 
 #puzzle-container {
-
 	width: 100%;
-	
 }
 
-#blocklyDiv {
-
-
+#blocklyArea {
 	width: 70%;
-height: 480px; 
-display: inline-block;
-float: left;
-@media only screen and (max-width : 1000px) {
+	height: 480px; 
+	display: inline-block;
+	float: left;
+	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
 }
+.underline-span {
+	text-decoration: underline;
+}
 
-	#computerDiv {
+.input-span {
+	color: blue;
+}
 
-		background-color: #20a028;
-	width: 70%;
-height: 400px; 
-border-radius: 20px;
-display: inline-block;
-float: left;
-position: relative;
-text-align: center;
+.output-span {
+	color: yellow;
 
-span {
+}
+
+#demo-container {
 	width: 100%;
-	color: white;
 	text-align: center;
-	font-size: 5em;
-	line-height: 5em;
 }
+
+#computerDiv {
+	margin: auto;
+	background-color: grey;
+	width: 70%;
+	height: 400px; 
+	border-radius: 20px;
+	display: inline-block;
+	
+	
+	text-align: center;
+	#computer-title {
+		width: 100%;
+		color: white;
+		text-align: center;
+		font-size: 5em;
+		line-height: 5em;
+		position: relative;
+}
+
+#computer-output {
+	position: absolute;
+	right: 0px;
+	bottom: 200px;
+	font-size: 9em;
+	color: yellow;
+	span {
+		position: absolute;
+	}
+}
+
 @media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
-
-
 }
 
 #inputDiv {
 	background-color: white;
 	width: 70%;
-	/*margin-left: auto;
-		margin-right: auto;*/
-
-		div {
-			display: inline-block;
-			position: relative;
-	z-index: 10;
+	div {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+	}
+	span {
+		position: relative;
+		z-index: 10;
 		}
-
-		span {
-			position: relative;
-	z-index: 10;
-
-		}
-
 }
 
 .demo-inputs {
-	font-size: 2em;
-	line-height: 2em;
-	
+	background-color: transparent !important;
+	font-size: 3em;
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	h2 {
+		display: inline-block;
+		border: 0;
+		margin: 0px;
+	}
 }
 
-#input-list {
+#output-demo {
+	display: inline-block;
+	float: right;
+	color: yellow;
 }
-	
-
 
 #outputDiv {
-
-	
 	display: inline-block;
 	float: left;
 	border-radius: 20px;
 	width: 25%;
 	text-align: center;
-
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
-
-
 	button {
 		display: inline-block;
 		width: 90%;
@@ -319,11 +277,7 @@ span {
 		border-radius: 10px;
 		height: 2em;
 		font-size: 1.5em;
-		
-
 	}
-	
-
 	table {
 		background-color: white;
 		margin-left: auto;
@@ -332,51 +286,81 @@ span {
 		border-radius: 10px;
 		margin-top: 10px;
 	}
-
-	#correct-th {
-
-	}
-
+	/*if there is something in the correct column, make it green*/
 	td:nth-child(2) {
 		color: green;
 	}
+
 }
+
+.demoOutputDiv {
+		display: inline-block;
+		
+		float: left;
+		position: relative;
+		height: 400px;
+		font-size: 3em;
+
+		span {
+			position: relative;
+			
+		}
+	}
 
 #puzzle-description {
 	width: 70%;
 	border-radius: 20px;
 	height: 50px;
 	background-color: white;
-	/*margin: 5px auto;*/
-
 	span {
 		padding-left: 20px;
 	}
-@media only screen and (max-width : 1000px) {
+	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
-
-
-
 }
-
 #winscreenDiv {
 	position: absolute;
 	background-color: #369b4f;
 	width: 50%;
 	margin-left: auto; 
-  margin-right: auto; 
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-bottom: 10%;
-  border-radius: 20px;
-  top: -400px;
-  /*display: hidden;*/
-  @media only screen and (max-width : 1000px) {
+  	margin-right: auto; 
+  	left: 0;
+  	right: 0;
+  	text-align: center;
+  	padding-bottom: 10%;
+  	border-radius: 20px;
+  	top: -400px;
+	@media only screen and (max-width : 1000px) {
 		top: -900px;
 	}
-
+}
+#demoscreenDiv {
+	position: absolute;
+	background-color: #369b4f;
+	width: 50%;
+	margin-left: auto; 
+  	margin-right: auto; 
+  	left: 0;
+  	right: 0;
+  	text-align: center;
+  	padding-bottom: 10%;
+  	border-radius: 20px;
+  	top: -400px;
+  	@media only screen and (max-width : 1000px) {
+		top: -900px;
+	}
+	.demo-button {
+		display: inline-block;
+		width: 90%;
+		background-color: #c14545;
+		border-radius: 10px;
+		height: 2em;
+		font-size: 1.5em;
+	}
+	.button-hidden {
+		display: none;
+	}
 }
 
 #winscreenHeaderContainer {
@@ -394,9 +378,7 @@ span {
 	display: inline-block;
 	float: right;
 	width: 50%;
-	
 	padding-bottom: 10%;
-
 }
 
 #winscreenStayContainer {
@@ -405,9 +387,7 @@ span {
 	display: inline-block;
 	float: left;
 	width: 50%;
-
 	padding-bottom: 10%;
-
 }
 
 #winscreenStay {
@@ -420,11 +400,10 @@ span {
 }
 
 #winscreenNext {
-display: inline-block;
-height: 100px;
-line-height: 100px;
-width: 80%;
+	display: inline-block;
+	height: 100px;
+	line-height: 100px;
+	width: 80%;
 	outline: 2px #5ed67c dashed;
 	font-size: 2em;
-
 }
