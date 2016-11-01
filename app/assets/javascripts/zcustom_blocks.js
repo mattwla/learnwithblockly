@@ -22,6 +22,18 @@ Blockly.Blocks['block_8'] = {
   }
 };
 
+Blockly.Blocks['block_1'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("1");
+    this.setOutput(true, "Number");
+    this.setColour(230);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+
 Blockly.Blocks['block_6'] = {
   init: function() {
     this.appendDummyInput()
@@ -58,6 +70,11 @@ Blockly.JavaScript['output'] = function(block) {
 
 Blockly.JavaScript['block_8'] = function(block) {
   var code = 8;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['block_1'] = function(block) {
+  var code = 1;
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 

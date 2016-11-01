@@ -1,32 +1,50 @@
 <%#PROVIDE TITLE%>
 <%provide(:title, "Test: Puzzle 2") %>
-<xml id="toolbox" style="display: none">
-
-<category name="Category 1">
-  <block type="controls_repeat_ext">
-    <value name="TIMES">
-    <shadow type="math_number">
-      <field name="NUM">10</field>
-    </shadow>
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <block type="get_input"></block>
+  <block type="math_arithmetic">
+    <field name="OP">ADD</field>
+    <value name="A">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <value name="B">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
     </value>
   </block>
-  <block type="block_8"></block>
-  <block type="math_arithmetic"></block>
-  <block type="block_6"></block>
-  <block type="get_input"></block>
-  <block type="variables_set">
-    <field name="VAR">x</field>
-  </block>
-  </category>
-<category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
+  <block type="block_1"></block>
 </xml>
 
+<xml xmlns="http://www.w3.org/1999/xhtml" id="workspaceBlocks" style="display:none">
+  <block type="output" id="U^JuZeB9v[H=c3S-ci26" x="153" y="88">
+    <value name="output">
+      <block type="math_arithmetic" id="^pJBW[C(Gt1}[j1L|xJB">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <block type="get_input" id="y-tklsv6sfq3tSn2WUzn"></block>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="leB2cG.-[Yvh_z0P0{Zh">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
+
+
+
 <div id="puzzle-description">
-<span> Can you calculate the factorial of each input? (for example, the factorial of 4 is 4*3*3*1 = 24)</span>
+<span class="problem-span">Problem </span>
+<span>Write a program that adds 1 to the input.</span>
 </div>
 
 <div id="inputDiv">
-<h2 id="inputs">Inputs:</h2>
+<h2 id="inputs">Input = </h2>
 </div>
 
 <div id="blocklyArea">
@@ -44,26 +62,47 @@
   </table>
 </div>
 
+<div id="demoscreenDiv">
+  <div id="winscreenHeaderContainer">
+    <h1 id="winscreenHeader">You beat BlocklySolve puzzles by using code, take a look at the problem code here, then press Run Code to see it in action! </h1>
+  </div>
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Take a look!</button>
+  <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
+  <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
+</div>
+
 <div id="winscreenDiv">
   <div id="winscreenHeaderContainer">
-    <h1 id="winscreenHeader">Puzzle Solved!<h1>
+    <h1 id="winscreenHeader">In the next lesson you will solve a puzzle on your own! </h1>
   </div>
-  <div id="winscreenStayContainer">
-    <div id="winscreenStay">Stay on this puzzle</div>
-  </div>
-  <div id="winscreenNextContainer">
-    <div id="winscreenNext">Next Puzzle</div>
-  </div>
+
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Watch again</button>
+  <%=button_to "Next Lesson", page_path('howto/3'), method: :get, class: "demo-button"%>
 </div>
 
 
 
 
 <script>
+
+var options = { 
+  toolbox: document.getElementById('toolbox'),
+ collapse : false, 
+  comments : false, 
+  css : true, 
+  disable : false, 
+  maxBlocks : Infinity, 
+  media : 'https://blockly-demo.appspot.com/static/media/', 
+  readOnly : true, 
+  rtl : false, 
+  scrollbars : false, 
+  sounds : true
+};
+
 var blocklyArea = document.getElementById('blocklyArea');
 var blocklyDiv = document.getElementById('blocklyDiv');
 var workspace = Blockly.inject(blocklyDiv,
-  {toolbox: document.getElementById('toolbox'), scrollbars: false});
+  options);
 var onresize = function(e) {
 // Compute the absolute coordinates and dimensions of blocklyArea.
 var element = blocklyArea;
@@ -86,10 +125,10 @@ Blockly.svgResize(workspace);
 
 var INPUT = {
   input: 0, //init a current input
-  input_array: [4, 8] //list of test cases
- };
+  input_array: [1] //list of test cases
+};
 var CORRECT_OUTPUT = {
-  output_array: [24, 40320], //what test case should output as
+  output_array: [2], //what test case should output as
 };
 var OUTPUT = {
   output_array: [] //init an array to store code output runs
@@ -102,8 +141,41 @@ var defaultXml =
      /* '  <block type="get_input" deletable="false" x="35" y="80">' +
       '  </block>' +*/
       '</xml>';
-var xml = Blockly.Xml.textToDom(defaultXml);
-Blockly.Xml.domToWorkspace(xml, workspace);
+
+
+var xml = document.getElementById("workspaceBlocks"); 
+//Blockly.Xml.textToDom(defaultXml);
+Blockly.Xml.domToWorkspace(workspace, workspaceBlocks);
+
+
+function demoScreen() {
+  $("#demoscreenDiv").animate({"top": "+=550px" }, "slow");
+};
+
+function hideDemoScreen() {
+  setUpOutput();
+  $("#demoscreenDiv").animate({"top": "-=550px" }, "slow");
+    setTimeout(function(){
+      //runDemoAnimation();
+  }, 1500);
+};
+
+function endDemoScreen() {
+  document.getElementById("winscreenHeader").innerHTML = "The program added 1 to the input!";
+  $(".play-button").hide();
+  $(".button-hidden").show();
+  demoScreen();
+}
+
+
+
+function setUpOutput() {
+$('#demo-output-value').css("opacity", 0);
+$('#demo-output-value').css("top", 300);
+}
+
+
+demoScreen();
 
 buildTable();
 displayInputs(); //fill the input element with inputs

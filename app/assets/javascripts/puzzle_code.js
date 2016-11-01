@@ -92,7 +92,11 @@ function runAnimation() {
   var correct = 0;
   //calculate how much input must travel depenidng on presence of categories in toolbox
   if (workspace.toolbox_ == null) {
-    var xoffset = workspace.flyout_.getWidth() - 55;
+      if (workspace.flyout_ == null) {
+        var xoffset = -55;
+      } else {
+        var xoffset = workspace.flyout_.getWidth() - 55;
+      }   
   } else {
     var xoffset = workspace.toolbox_.getWidth() - 55;
   }
@@ -159,37 +163,26 @@ function runAnimation() {
 }
 
 function runDemoAnimation() {
+
     var count = 0;
     function animationLoop(count) {
+
         $("#input-list" + count).animate({ "left": "+= 50", "top": "+=300" }, 1500, function() {
-        $( "#input-list" + count).fadeOut(1000, function() {
-          document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
-          var animoutput = document.createElement('span');
-          animoutput.innerHTML = CORRECT_OUTPUT.output_array[count];
-          animoutput.id = "anim-output" + count;
-          coutput = document.getElementById("computer-output");
-          setTimeout(function(){
-          coutput.appendChild(animoutput);
-          $("#anim-output"+count).animate({"left": "+=" + (160)}, 1000, function() {
-          });
-          setTimeout(function(){
-          //remove input span element, and remove comma
-            $( "#input-list" + count).remove();
-            $("#input-container" + count).remove();
-            $('#inputs span').first().remove(); //remove the comma span
-              if (count < (INPUT.input_array.length - 1)) {
-                count++;
-                setTimeout(function(){
-                  animationLoop(count);
-                }, 1500);
-              } else {
+        $("#input-list" + count).fadeTo(1500, 0, function() { 
+        $("#demo-output-value").fadeTo(1500, 100, function() {
+        $("#demo-output-value").animate({"top": "-=300"}, 1500, function() { 
+
+         
+                $("#input-list" + count).remove();
                 displayInputs();
                 endDemoScreen();
-                          }
-          }, 1800);
-        }, 1500);
-      });
-    });
+              });
+                
+               });
+                          });
+          });
+      //});
+    //});
   }
   animationLoop(count);
 }

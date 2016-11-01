@@ -1,8 +1,8 @@
 <% provide(:title, "How-To: 1") %>
 <div id="demo-container">
 <div id="inputDiv" class="demo-inputs">
-	<h2 id="inputs" class="input-span"> Input = </h2>
-	<h2 id="output-demo"> Output =  <span id="demo-output-value">?</span></h2>
+	<h2 id="inputs" class="input-span">Input =</h2>
+	<h2 id="output-demo"> Output =  <span id="demo-output-value">3</span></h2>
 
 </div>
 <div id="computerDiv">
@@ -14,8 +14,9 @@
 	<div id="winscreenHeaderContainer">
 		<h1 id="winscreenHeader">Computer programs take in <span class="input-span"><span class="underline-span">in</span>puts</span>, and turn them into <span class="output-span"><span class="underline-span">out</span>puts</span>, press play to watch!</h1>
 	</div>
- 	<button class="demo-button" onclick="hideDemoScreen()">PLAY!</button>
- 	<%=button_to "Next Lesson", page_path('howto/2/'), class: "demo-button button-hidden"%>
+ 	<button class="demo-button play-button" onclick="hideDemoScreen()">PLAY!</button>
+ 	<button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
+ 	<%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 </div>
@@ -39,6 +40,7 @@ function demoScreen() {
 };
 
 function hideDemoScreen() {
+	setUpOutput();
 	$("#demoscreenDiv").animate({"top": "-=550px" }, "slow");
   	setTimeout(function(){
    		runDemoAnimation();
@@ -46,11 +48,20 @@ function hideDemoScreen() {
 };
 
 function endDemoScreen() {
-  document.getElementById("winscreenHeader").innerHTML = "In the next lesson we will look at the programs code!";
-  document.getElementById("demoButton").onclick = "pages/howto/2/'";
+  document.getElementById("winscreenHeader").innerHTML = "The program added 1 to the input!";
+ 	$(".play-button").hide();
+ 	$(".button-hidden").show();
   demoScreen();
 }
 
+
+
+function setUpOutput() {
+$('#demo-output-value').css("opacity", 0);
+$('#demo-output-value').css("top", 300);
+}
+
+setUpOutput();
 demoScreen();
 
 </script>
