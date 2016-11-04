@@ -76,6 +76,7 @@ function buildTable() {
 
 function winScreen() {
   $("#winscreenDiv").animate({"top": "+=550px" }, "slow");
+  $("#run-code-button").attr("onclick", "");
 }
 
 function runAnimation() {
@@ -167,10 +168,10 @@ function runDemoAnimation() {
     var count = 0;
     function animationLoop(count) {
 
-        $("#input-list" + count).animate({ "left": "+= 50", "top": "+=300" }, 1500, function() {
+        $("#input-list" + count).animate({ "left": "+= 50", "top": ("+=" + $('#computerDiv').height())}, 1500, function() {
         $("#input-list" + count).fadeTo(1500, 0, function() { 
         $("#demo-output-value").fadeTo(1500, 100, function() {
-        $("#demo-output-value").animate({"top": "-=300"}, 1500, function() { 
+        $("#demo-output-value").animate({"top": ("-=" + $('#computerDiv').height())}, 1500, function() { 
 
          
                 $("#input-list" + count).remove();

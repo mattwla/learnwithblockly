@@ -52,7 +52,7 @@
 </div>
 
 <div id="outputDiv">
-  <button onclick="runCode()">Run Code!</button>
+  <button id="run-code-button" onclick="">Run Code!</button>
   <table id="output-table">
    <tr>
      <th>Input</th>
@@ -64,7 +64,7 @@
 
 <div id="demoscreenDiv">
   <div id="winscreenHeaderContainer">
-    <h1 id="winscreenHeader">You beat BlocklySolve puzzles by using code, take a look at the problem code here, then press Run Code to see it in action! </h1>
+    <h1 id="winscreenHeader">You beat BlocklySolve puzzles by using code. This puzzle is already solved, take a look at it, then press Run Code to see it in action! </h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Take a look!</button>
   <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
@@ -76,7 +76,7 @@
     <h1 id="winscreenHeader">In the next lesson you will solve a puzzle on your own! </h1>
   </div>
 
-  <button class="demo-button play-button" onclick="hideDemoScreen()">Watch again</button>
+  <button class="demo-button play-button" onclick="hideWinScreen()">Watch again</button>
   <%=button_to "Next Lesson", page_path('howto/3'), method: :get, class: "demo-button"%>
 </div>
 
@@ -155,9 +155,15 @@ function demoScreen() {
 function hideDemoScreen() {
   setUpOutput();
   $("#demoscreenDiv").animate({"top": "-=550px" }, "slow");
-    setTimeout(function(){
-      //runDemoAnimation();
-  }, 1500);
+$("#run-code-button").attr("onclick","runCode()");
+};
+
+
+function hideWinScreen() {
+  setUpOutput();
+  $("#winscreenDiv").animate({"top": "-=550px" }, "slow");
+  $("#run-code-button").attr("onclick","runCode()");
+  
 };
 
 function endDemoScreen() {
