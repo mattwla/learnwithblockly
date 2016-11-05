@@ -8,7 +8,7 @@ function showCode() {
 };
 
 function runCode() {
-  $("#run-code-button").attr("onclick",""); //prevent from clicking run code again during animation
+  $("#run-code-button").attr("onclick",""); //prevent from clicking run code again during
 
   var output = NaN;
   var rootBlock = null;
