@@ -238,18 +238,89 @@ body {
 }
 
 #inputDiv {
+	/*display: inline-block;*/
+	/*background-color: white;*/
+	color: blue;
+	width: 70%;
+
+@media only screen and (max-width : 1000px){
+		width: 50%;
+		float: left;
+		height: 30px;
+		line-height: 1em;
+
+		div { 
+			height: 1em;
+			font-size: 1em;
+			line-height: 1em;
+		 }
+
+		h2 {
+			height: 1em;
+			font-size: 1em;
+			line-height: 1em;
+		}
+	}
+
+
+
+
+
+
+	div {
+
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+	}
+	span {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		}
+}
+
+
+#demoOneInputDiv {
+	/*display: inline-block;*/
 	background-color: white;
 	width: 70%;
+
+
+
+
+
 	div {
 		display: inline-block;
 		position: relative;
 		z-index: 10;
 	}
 	span {
+		display: inline-block;
 		position: relative;
 		z-index: 10;
 		}
 }
+
+
+#runCodeDiv {
+	display: inline-block;
+	width: 25%;
+
+	@media only screen and (max-width : 1000px){
+width: 50%;
+	}
+}
+
+#run-code-button {
+		display: inline-block;
+		float: right;
+		width: 100%;
+		background-color: #c14545;
+		border-radius: 10px;
+		/*height: 2em;*/
+		font-size: 1.5em;
+	}
 
 .demo-inputs {
 	/*width: 100% !important;*/
