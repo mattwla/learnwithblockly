@@ -244,6 +244,24 @@ body {
 	color: blue;
 	width: 70%;
 
+	h2 {
+		border: 0px;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	div {
+
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+	}
+	span {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		}
+
 @media only screen and (max-width : 1000px){
 		width: 50%;
 		float: left;
@@ -264,23 +282,7 @@ body {
 		}
 	}
 
-	h2 {
-		border: 0px;
-		padding: 0px;
-		margin: 0px;
-	}
-
-	div {
-
-		display: inline-block;
-		position: relative;
-		z-index: 10;
-	}
-	span {
-		display: inline-block;
-		position: relative;
-		z-index: 10;
-		}
+	
 }
 
 #inputBorderDiv {
@@ -291,6 +293,8 @@ body {
 	background-color: white;
 	
 	border-radius: 20px;
+
+	
 }
 
 
