@@ -258,13 +258,18 @@ body {
 	margin: 0 auto;
 	padding: 0;
 
-	@media only screen and (max-width : 1000px) {
+	@media only screen and (max-width : 1000px){
+		font-size: 1em;
+	}
+
+	@media only screen and (max-width : 600px) {
 		font-size: 1em;
 		
 
-
 	}
-
+	@media only screen and (min-width : 600px) and (max-width : 1000px){
+		font-size: 2.5em;
+	}
 
 
 	h2 {
