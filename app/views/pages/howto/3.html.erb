@@ -13,13 +13,14 @@
 
 
 <div id="puzzle-description">
+<span class="problem-span">Problem </span>
 <span id="desc-span"> Can you add six to the input?</span>
 </div>
 
 
 
 <div id="inputDiv">
-<h2 id="inputs"> Inputs: </h2>
+<h2 id="inputs"> Input: </h2>
 </div>
 
 
@@ -32,7 +33,7 @@
 </div>
 
 <div id="outputDiv">
- <button onclick="runCode()">Run Code!</button>
+ <button id="run-code-button" onclick="runCode()">Run Code!</button>
 
  <%#this all can be partial %>
 <table id="output-table">
@@ -51,6 +52,15 @@
 <div id="winscreenNextContainer"><div id="winscreenNext">Next Puzzle</div></div>
 
 
+</div>
+
+<div id="demoscreenDiv">
+  <div id="winscreenHeaderContainer">
+    <h1 id="winscreenHeader">The white section is your program, it already has an input and output block. Drag in blocks from the gray section to add them to the code.</h1>
+  </div>
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Take a look!</button>
+  <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
+  <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 
@@ -105,8 +115,21 @@ var defaultXml =
  var xml = Blockly.Xml.textToDom(defaultXml);
     Blockly.Xml.domToWorkspace(xml, workspace);
 
+    function demoScreen() {
+  $("#demoscreenDiv").animate({"top": "+=500px" }, "slow");
+};
+
+
+function hideDemoScreen() {
+  //setUpOutput();
+  $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
+$("#run-code-button").attr("onclick","runCode()");
+};
+
+
 buildTable();
 displayInputs(); //fill the input element with inputs
+demoScreen();
 
 
 </script>

@@ -8,6 +8,8 @@ function showCode() {
 };
 
 function runCode() {
+  $("#run-code-button").attr("onclick",""); //prevent from clicking run code again during animation
+
   var output = NaN;
   var rootBlock = null;
   var blocks = workspace.getAllBlocks();
@@ -37,6 +39,7 @@ function runCode() {
   };
     //need to make this a choice.
     runAnimation();
+
 };
 
 //This takes inputs from the puzzle html.erb and puts them into the DOM
@@ -147,6 +150,7 @@ function runAnimation() {
                 count++;
                 animationLoop(count);
                 } else {
+                   $("#run-code-button").attr("onclick","runCode()"); //make button available again
                 //bring all input spand back for next try
                 displayInputs();
                 if (CORRECT_OUTPUT.output_array.length == correct) {
@@ -161,6 +165,8 @@ function runAnimation() {
   });   
 }
   animationLoop(count);
+
+
 }
 
 function runDemoAnimation() {
