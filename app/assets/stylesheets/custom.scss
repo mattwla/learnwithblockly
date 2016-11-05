@@ -240,6 +240,7 @@ body {
 #inputDiv {
 	/*display: inline-block;*/
 	/*background-color: white;*/
+	padding: 10px;
 	color: blue;
 	width: 70%;
 
@@ -256,16 +257,18 @@ body {
 		 }
 
 		h2 {
+
 			height: 1em;
 			font-size: 1em;
 			line-height: 1em;
 		}
 	}
 
-
-
-
-
+	h2 {
+		border: 0px;
+		padding: 0px;
+		margin: 0px;
+	}
 
 	div {
 
@@ -280,16 +283,22 @@ body {
 		}
 }
 
+#inputBorderDiv {
+	display: inline-block;
+	position: relative;
+	padding-left: 10px;
+
+	background-color: white;
+	
+	border-radius: 20px;
+}
+
 
 #demoOneInputDiv {
 	/*display: inline-block;*/
 	background-color: white;
 	width: 70%;
-
-
-
-
-
+	
 	div {
 		display: inline-block;
 		position: relative;
@@ -308,7 +317,7 @@ body {
 	width: 25%;
 
 	@media only screen and (max-width : 1000px){
-width: 50%;
+width: 30%;
 	}
 }
 
