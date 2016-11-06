@@ -1,64 +1,52 @@
 <%#PROVIDE TITLE%>
 <% provide(:title, "How-To: Puzzle 1") %>
 
-
 <xml id="toolbox" style="display: none">
   <block type="math_arithmetic"></block>
-	
-  <block type="block_8"></block>
+	<block type="block_8"></block>
   <block type="block_6"></block>
-  
-
 </xml>
 
 
 <div id="puzzle-description">
-<span class="problem-span">Problem </span>
-<span id="desc-span"> Can you add six to the input?</span>
+  <span class="problem-span">Problem </span>
+  <span id="desc-span"> Can you add six to the input?</span>
 </div>
-
-
 
 <div id="inputDiv">
-<div id="inputBorderDiv">
-<h2 id="inputs"> Input: </h2>
-</div>
+  <div id="inputBorderDiv">
+    <h2 id="inputs"> Input: </h2>
+  </div>
 </div>
 
 <div id ="runCodeDiv">
-<button id="run-code-button" onclick="runCode()">Run Code!</button>
+  <button id="run-code-button" onclick="runCode()">Run Code!</button>
 </div>
-
-
 
 <%#<button onclick="showCode()">Show JavaScript</button>%>
    
    <%# <p id="output"> Current output is </p>%>
 
 <div id="blocklyArea">
-<div id="blocklyDiv"></div>
+  <div id="blocklyDiv"></div>
 </div>
 
 <div id="outputDiv">
  <%#<button id="run-code-button" onclick="runCode()">Run Code!</button>%>
-
- <%#this all can be partial %>
-<table id="output-table">
+  <%#this all can be partial %>
+  <table id="output-table">
 		<tr>
-	<th>Input</th>
-	<th>Output</th>
-	<th id="correct-th">Correct?</th>
-	</tr>
-</table>
+	   <th>Input</th>
+	   <th>Output</th>
+	   <th id="correct-th">Correct?</th>
+	   </tr>
+  </table>
 </div>
 
 <div id="winscreenDiv">
-
-<div id="winscreenHeaderContainer"><h1 id="winscreenHeader">Puzzle Solved!<h1></div>
-<div id="winscreenStayContainer"><div id="winscreenStay">Stay on this puzzle</div></div>
-<div id="winscreenNextContainer"><div id="winscreenNext">Next Puzzle</div></div>
-
-
+  <div id="winscreenHeaderContainer"><h1 id="winscreenHeader">Puzzle Solved!<h1></div>
+  <div id="winscreenStayContainer"><div id="winscreenStay">Stay on this puzzle</div></div>
+  <div id="winscreenNextContainer"><div id="winscreenNext">Next Puzzle</div></div>
 </div>
 
 <div id="demoscreenDiv">
@@ -70,18 +58,13 @@
   <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
-
-
-
 <script>
-
 var documentWidth = $( document ).width();
 var scale = 1;
 /*if ((documentWidth < 1000) && (documentWidth > 600))  {
   scale = 1.5;
 }*/
-
- var blocklyArea = document.getElementById('blocklyArea');
+var blocklyArea = document.getElementById('blocklyArea');
 var blocklyDiv = document.getElementById('blocklyDiv');
 var workspace = Blockly.inject(blocklyDiv,
   {toolbox: document.getElementById('toolbox'), scrollbars: false, zoom: {startScale: scale}});
@@ -129,22 +112,18 @@ var defaultXml =
  var xml = Blockly.Xml.textToDom(defaultXml);
     Blockly.Xml.domToWorkspace(xml, workspace);
 
-    function demoScreen() {
+function demoScreen() {
   $("#demoscreenDiv").animate({"top": "+=500px" }, "slow");
 };
-
 
 function hideDemoScreen() {
   //setUpOutput();
   $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
-$("#run-code-button").attr("onclick","runCode()");
+  $("#run-code-button").attr("onclick","runCode()");
 };
-
 
 buildTable();
 displayInputs(); //fill the input element with inputs
 demoScreen();
 
-
 </script>
-
