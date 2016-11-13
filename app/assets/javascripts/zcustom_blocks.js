@@ -45,6 +45,17 @@ Blockly.Blocks['block_6'] = {
   }
 };
 
+Blockly.Blocks['block_2'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("2");
+    this.setOutput(true, "Number");
+    this.setColour(230);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
 Blockly.Blocks['get_input'] = {
   // Block for row variable getter.
   init: function() {
@@ -82,6 +93,12 @@ Blockly.JavaScript['block_6'] = function(block) {
   var code = 6;
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
+
+Blockly.JavaScript['block_2'] = function(block) {
+  var code = 2;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 
 Blockly.JavaScript['get_input'] = function(block) {
   // Generate JavaScript for row variable getter.

@@ -1,5 +1,5 @@
 <%#PROVIDE TITLE%>
-<%provide(:title, "Test: Puzzle 2") %>
+<%provide(:title, "How-To: Puzzle 2") %>
 <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
   <block type="get_input"></block>
   <block type="math_arithmetic">
@@ -62,7 +62,7 @@
   </table>
 </div>
 
-<div id="demoscreenDiv">
+<div id="demoscreenDiv" class="dropScreen">
   <div id="winscreenHeaderContainer">
     <h1 id="winscreenHeader">You beat BlocklySolve puzzles by using code. This puzzle is already solved, take a look at it, then press Run Code to see it in action! </h1>
   </div>
@@ -84,7 +84,6 @@
 
 
 <script>
-
 var options = { 
   toolbox: document.getElementById('toolbox'),
  collapse : false, 
@@ -96,7 +95,7 @@ var options = {
   readOnly : true, 
   rtl : false, 
   scrollbars : false, 
-  sounds : true
+  sounds : false
 };
 
 var blocklyArea = document.getElementById('blocklyArea');
@@ -148,41 +147,8 @@ var xml = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspace, workspaceBlocks);
 
 
-function demoScreen() {
-  $("#demoscreenDiv").animate({"top": "+=550px" }, "slow");
-};
-
-function hideDemoScreen() {
-  setUpOutput();
-  $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
-$("#run-code-button").attr("onclick","runCode()");
-};
-
-
-function hideWinScreen() {
-  setUpOutput();
-  $("#winscreenDiv").animate({"top": "-=500px" }, "slow");
-  $("#run-code-button").attr("onclick","runCode()");
-  
-};
-
-function endDemoScreen() {
-  document.getElementById("winscreenHeader").innerHTML = "The program added 1 to the input!";
-  $(".play-button").hide();
-  $(".button-hidden").show();
-  demoScreen();
-}
-
-
-
-function setUpOutput() {
-$('#demo-output-value').css("opacity", 0);
-$('#demo-output-value').css("top", 300);
-}
-
-
 demoScreen();
-
 buildTable();
 displayInputs(); //fill the input element with inputs
+
 </script>

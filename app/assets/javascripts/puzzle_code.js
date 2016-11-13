@@ -97,12 +97,12 @@ function runAnimation() {
   //calculate how much input must travel depenidng on presence of categories in toolbox
   if (workspace.toolbox_ == null) {
       if (workspace.flyout_ == null) {
-        var xoffset = -55;
+        var xoffset = -90;
       } else {
-        var xoffset = workspace.flyout_.getWidth() - 55;
+        var xoffset = workspace.flyout_.getWidth() - 90;
       }   
   } else {
-    var xoffset = workspace.toolbox_.getWidth() - 55;
+    var xoffset = workspace.toolbox_.getWidth() - 90;
   }
   
   function animateExtraInputs(count) {
@@ -193,6 +193,43 @@ function runDemoAnimation() {
   }
   animationLoop(count);
 }
+
+
+
+function demoScreen() {
+  $("#demoscreenDiv").animate({"top": "+=550px" }, "slow");
+};
+
+function hideDemoScreen() {
+  setUpOutput();
+  $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
+$("#run-code-button").attr("onclick","runCode()");
+};
+
+
+function hideWinScreen() {
+  setUpOutput();
+  $("#winscreenDiv").animate({"top": "-=500px" }, "slow");
+  $("#run-code-button").attr("onclick","runCode()");
+  
+};
+
+function endDemoScreen() {
+  document.getElementById("winscreenHeader").innerHTML = "The program added 1 to the input!";
+  $(".play-button").hide();
+  $(".button-hidden").show();
+  demoScreen();
+}
+
+
+
+function setUpOutput() {
+$('#demo-output-value').css("opacity", 0);
+$('#demo-output-value').css("top", 300);
+
+
+}
+
 
   
 
