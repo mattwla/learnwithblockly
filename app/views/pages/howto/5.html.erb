@@ -1,15 +1,14 @@
 <%#PROVIDE TITLE%>
-<% provide(:title, "How-To: Puzzle 3") %>
+<% provide(:title, "How-To: Puzzle 5") %>
 
 <xml id="toolbox" style="display: none">
-  <block type="math_arithmetic"></block>
-	<block type="block_8"></block>
-  <block type="block_6"></block>
+  <block type="block_2"></block>
+  <block type="math_add"></block>
 </xml>
 
 <div id="puzzle-description">
   <span class="problem-span">Problem </span>
-  <span id="desc-span"> Can you add six to the input?</span>
+  <span id="desc-span"> Add 8 to the input.</span>
 </div>
 
 <div id="inputDiv">
@@ -41,16 +40,17 @@
     <h1 id="winscreenHeader">Puzzle Solved!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
-  <%=button_to "Next Puzzle", page_path('howto/4'), method: :get, class: "demo-button"%>
+  
+  <%=button_to "Next Puzzle", page_path('howto/6'), method: :get, class: "demo-button"%>
 </div>
 
 <div id="demoscreenDiv" class=dropScreen>
   <div id="winscreenHeaderContainer">
-    <h1 id="winscreenHeader">The white section is your program, it already has an input and output block. Drag in blocks from the gray section to add them to the code.</h1>
+    <h1 id="winscreenHeader">Sometimes you need to get creative with the blocks you are given!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
   <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
-  <%#=button_to "Next Lesson", page_path('howto/4'), method: :get, class: "demo-button"%>
+  <%=button_to "Next Lesson", page_path('howto/6'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 <script>
@@ -85,10 +85,10 @@ Blockly.svgResize(workspace);
 
 var INPUT = {
     input: 0, //init a current input
-    input_array: [2] //list of test cases
+    input_array: [8] //list of test cases
  };
 	var CORRECT_OUTPUT = {
- 	output_array: [8], //what test case should output as
+ 	output_array: [16], //what test case should output as
  
  }
 

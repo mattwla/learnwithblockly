@@ -40,17 +40,17 @@
     <h1 id="winscreenHeader">Puzzle Solved!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
-  <button class="demo-button play-button" onclick="hideDemoScreen()">Next Puzzle!</button>
-  <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
+  
+  <%=button_to "Next Puzzle", page_path('howto/5'), method: :get, class: "demo-button"%>
 </div>
 
 <div id="demoscreenDiv" class=dropScreen>
   <div id="winscreenHeaderContainer">
     <h1 id="winscreenHeader">You can sometimes customize blocks, try pressing the small arrow on the addition block to help solve this one.</h1>
   </div>
-  <button class="demo-button play-button" onclick="hideDemoScreen()">Take a look!</button>
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
   <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
-  <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
+  <%=button_to "Next Lesson", page_path('howto/5'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 <script>
