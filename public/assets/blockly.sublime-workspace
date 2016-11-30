@@ -1,0 +1,1476 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"docum",
+				"documentWidth"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"inde",
+				"text-indent"
+			],
+			[
+				"in",
+				"input-container"
+			],
+			[
+				"anim",
+				"animateExtraInputs"
+			],
+			[
+				"coo",
+				"coords_arr"
+			],
+			[
+				"puzzle",
+				"puzzle-description"
+			],
+			[
+				"input",
+				"input_array"
+			],
+			[
+				"display",
+				"displayInputs"
+			],
+			[
+				"output",
+				"output_array"
+			],
+			[
+				"animation",
+				"animationLoop"
+			],
+			[
+				"otput",
+				"output_array"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"conten",
+				"justify-content"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"widt",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"bloc",
+				"block_8"
+			],
+			[
+				"conver",
+				"conversations"
+			],
+			[
+				"destroy",
+				"destroy_picture"
+			],
+			[
+				"bike-",
+				"bike-gallery-picture"
+			],
+			[
+				"ima",
+				"image_tag"
+			],
+			[
+				"picture",
+				"picture_params"
+			],
+			[
+				"brake",
+				"brake_lever"
+			],
+			[
+				"user",
+				"user_params"
+			],
+			[
+				"remembe",
+				"remember_digest"
+			],
+			[
+				"up",
+				"update_attribute"
+			],
+			[
+				"remember",
+				"remember_token"
+			],
+			[
+				"password",
+				"password_confirmation"
+			],
+			[
+				"du",
+				"duplicate_user"
+			],
+			[
+				"max",
+				"maximum"
+			],
+			[
+				"asser",
+				"assert_not"
+			],
+			[
+				"roo",
+				"root_path"
+			],
+			[
+				"assert",
+				"assert_select"
+			],
+			[
+				"ass",
+				"assert_select"
+			],
+			[
+				"burger",
+				"burgerfall"
+			],
+			[
+				"bur",
+				"burgerfall"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"new",
+				"new_positions"
+			],
+			[
+				"game",
+				"game_message"
+			],
+			[
+				"choose",
+				"choose_word"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"sub",
+				"subtract_move"
+			],
+			[
+				"accept",
+				"accept_guess"
+			],
+			[
+				"is",
+				"is_guess_valid"
+			],
+			[
+				"get",
+				"get_input"
+			],
+			[
+				"word",
+				"word_slots"
+			],
+			[
+				"day",
+				"day_of_week"
+			],
+			[
+				"process",
+				"process_date"
+			],
+			[
+				"erb",
+				"erb_template"
+			],
+			[
+				"legi",
+				"legislators_by_zipcode"
+			],
+			[
+				"le",
+				"legislator_string"
+			],
+			[
+				"leg",
+				"legislator_names"
+			],
+			[
+				"l",
+				"legislator"
+			],
+			[
+				"zip",
+				"zipcode"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"hidden",
+				"hidden_code"
+			],
+			[
+				"tr",
+				"trimmed_selection"
+			],
+			[
+				"hiden",
+				"hidden_code"
+			],
+			[
+				"dots",
+				"dots_left"
+			],
+			[
+				"sen",
+				"sentence_count"
+			],
+			[
+				"se",
+				"sentence_count"
+			],
+			[
+				"poss",
+				"possible_pegs"
+			],
+			[
+				"po",
+				"possible_pegs"
+			],
+			[
+				"all",
+				"all_possible"
+			],
+			[
+				"min",
+				"min_max"
+			],
+			[
+				"determine",
+				"determine_feedback"
+			],
+			[
+				"color",
+				"colors_correct"
+			],
+			[
+				"guess",
+				"guess_count"
+			],
+			[
+				"AI",
+				"AI_game_loop"
+			],
+			[
+				"colo",
+				"colors_with_position_correct"
+			],
+			[
+				"show",
+				"show_hidden_dots"
+			],
+			[
+				"colors",
+				"colors_with_position_correct"
+			],
+			[
+				"row",
+				"row_information"
+			],
+			[
+				"current",
+				"current_player"
+			],
+			[
+				"place",
+				"place_x"
+			],
+			[
+				"player",
+				"player_name"
+			],
+			[
+				"g",
+				"guesses"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"content",
+				"align-content"
+			],
+			[
+				"dict",
+				"dict_word"
+			],
+			[
+				"article",
+				"articles_path"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"conte",
+				"justify-content"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"border-top-",
+				"border-top-right-radius"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 193,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/controllers/main_pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 71,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/Gemfile",
+			"settings":
+			{
+				"buffer_size": 1834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 358,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/layouts/_header.html.erb",
+			"settings":
+			{
+				"buffer_size": 137,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "zcustom_blocks.js",
+			"settings":
+			{
+				"buffer_size": 7404,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/main_pages/home.html.erb",
+			"settings":
+			{
+				"buffer_size": 782,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/assets/stylesheets/custom.scss",
+			"settings":
+			{
+				"buffer_size": 8441,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "puzzle_code.js",
+			"settings":
+			{
+				"buffer_size": 7584,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/1.html.erb",
+			"settings":
+			{
+				"buffer_size": 2008,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/3.html.erb",
+			"settings":
+			{
+				"buffer_size": 3374,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/4.html.erb",
+			"settings":
+			{
+				"buffer_size": 3325,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/5.html.erb",
+			"settings":
+			{
+				"buffer_size": 3269,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/6.html.erb",
+			"settings":
+			{
+				"buffer_size": 3287,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/7.html.erb",
+			"settings":
+			{
+				"buffer_size": 3363,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/demo2.html.erb",
+			"settings":
+			{
+				"buffer_size": 2961,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/2.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/6.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/3.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/assets/javascripts/blocks_compressed.js",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/demo1.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/1.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/plane/plane.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/plane/template.soy",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/plane/blocks.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/plane/index.html",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/assets/javascripts/application.js",
+		"/Users/mattlarrabee/rails_projects/blockly-project/app/assets/javascripts/zanswer_block.js",
+		"/Users/mattlarrabee/rails_projects/blockly-project/config/environments/production.rb",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/javascripts/application.js",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/config/routes.rb",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/generator/index.html",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/javascripts/answer_block.js",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/stylesheets/custom.scss",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/views/static_pages/home.html.erb",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/javascripts/javascript_compressed.js",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/javascripts/blocks_compressed.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/demos/plane/slider.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/logic.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/lists.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/colour.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/text.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/procedures.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/generators/javascript/math.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/loops.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/math.js",
+		"/Users/mattlarrabee/rails_projects/blockly-test/blockly/blocks/variables.js",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/controllers/static_pages_controller.rb",
+		"/Users/mattlarrabee/rails_projects/blockly-experiment/app/assets/javascripts/blockly_compressed.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/commontator/threads_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/commontator/subscriptions_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/commontator/comments_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/commontator/application_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/initializers/commontator.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/threads/show.js.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/threads/_show.js.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/threads/_show.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/threads/_reply.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/threads/_hide_show_links.js.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/helpers/commontator/application_helper.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/sessions/new.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/_form.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/user_mailer/password_reset.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/mailers/commontator/subscriptions_mailer.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/bikes_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/environments/production.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/user_mailer/password_reset.text.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/commontator/subscriptions_mailer/comment_created.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/user_mailer/account_activation.text.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/user_mailer/account_activation.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/bike.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/tos.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/about.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/new.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/stylesheets/custom.scss",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/_form.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/main_pages_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/routes.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/home.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/_bikelist.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/show.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161012124147_add_index_to_pictures.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161012122728_add_index_to_bikes.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161003145245_add_missing_indexes.acts_as_taggable_on_engine.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161003145243_add_missing_taggable_index.acts_as_taggable_on_engine.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161003145241_add_missing_unique_indices.acts_as_taggable_on_engine.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20160825024840_add_index_to_users_name_and_email.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/_index*",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/*_index+to_p*",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/show.json.jbuilder",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/_editshowgallery.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/javascripts/bikes.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/_searchbar.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/sessions_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/browse_search.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/edit.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/commontator/thread.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161012003549_add_more_components_to_bikes.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20160829150906_add_components_to_bikes.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/show.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/commontator/comment.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/locales/en.yml",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/edit.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/password_resets/edit.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/password_resets_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/helpers/users_helper.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/users_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161011234402_add_avatar_columns_to_users.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/user.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/message.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/conversation.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161010134157_create_messages.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/migrate/20161010134022_create_conversations.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/layouts/_header.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/messages_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/conversations_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/_showgallery.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/messages/index.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/conversations/index.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/Gemfile",
+		"/Users/mattlarrabee/rails_projects/bike-project/db/seeds.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/models/picture.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/*_list*",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/_list*",
+		"/Users/mattlarrabee/Desktop/backupcode.rails",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/initializers/mailboxer.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/pictures_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/layouts/application.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/javascripts/_header.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/helpers/application_helper.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/helpers/sessions_helper.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/stylesheets/application.css",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/javascripts/application.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/javascripts/jquery.bootstrap-autohidingnavbar.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/bikes/new.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/users/messages.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/helpers/users_helper",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/assets/javascripts/jquery.bootstrap-autohidingnavbar.min.js",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/main_pages/my_stable.html.erb",
+		"/Users/mattlarrabee/rails_projects/bike-project/test/mailers/previews/user_mailer_preview.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/config/environments/development.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/mailers/user_mailer.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/controllers/account_activations_controller.rb",
+		"/Users/mattlarrabee/rails_projects/bike-project/app/views/password_resets/new.html.erb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"offset",
+			"onclick",
+			"onClick",
+			"input",
+			"h2",
+			"inputs",
+			"inputDiv",
+			"input",
+			"inputs",
+			"{\n",
+			"input",
+			"runCo",
+			"onclick",
+			"on",
+			"action",
+			"demo",
+			"min-",
+			"demo",
+			"demo-out",
+			"input",
+			"output",
+			"button",
+			"watch again",
+			"watch-again",
+			"demo",
+			"screen",
+			"tool",
+			"input",
+			"\t\n",
+			"display",
+			"input",
+			"puzzle",
+			"hidden",
+			"demo",
+			"absol",
+			"input",
+			"z-",
+			"fadeIn",
+			"opacity",
+			"appendChild",
+			"appendChi",
+			"animateEx",
+			"root",
+			"BUTTON",
+			"length",
+			"workspace",
+			"Blockly",
+			"blockly",
+			"Toolbox",
+			"toolbox",
+			"defaultXml",
+			"plane_set_s",
+			"answer",
+			"absolute",
+			"INPUT.input",
+			"OUTPUT",
+			"rootCoord",
+			"root",
+			"count",
+			"coord",
+			"i",
+			"input_array",
+			"input",
+			"coord",
+			"INPUT.input",
+			"document",
+			"Answer",
+			"answe",
+			"span",
+			"static",
+			"Plane.rows1st",
+			"rows1st",
+			"Javascript",
+			"Blocks",
+			"JavaScript",
+			"javascript",
+			"plane",
+			"root",
+			"require",
+			"compressed",
+			"require",
+			"root",
+			"seats",
+			"slider",
+			"slider.js",
+			"change",
+			"slider",
+			"seats",
+			"eval",
+			"seats",
+			"setCorr",
+			"answer",
+			"activ",
+			"Searching",
+			"activated?",
+			"activ",
+			"sec",
+			"activ",
+			"if",
+			"async",
+			"email",
+			"from",
+			"validated",
+			"about",
+			"form",
+			"edit",
+			".for",
+			"alert",
+			".alert",
+			"upload",
+			"read",
+			"latest",
+			"h3",
+			"serve",
+			"compile",
+			".jpg",
+			"background",
+			"a {",
+			"margin-left",
+			"color",
+			"bike_list",
+			"body",
+			"alert",
+			"btn",
+			"input",
+			"block",
+			"component-form",
+			"dom"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"@@number",
+			"NUMBER"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 14,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/controllers/main_pages_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 71,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								878,
+								878
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/layouts/_header.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "zcustom_blocks.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1745.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/main_pages/home.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/assets/stylesheets/custom.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7690,
+								7690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6994.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "puzzle_code.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7570,
+								7570
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3009.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/1.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/3.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								783,
+								783
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/4.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								885,
+								885
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 417.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/5.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1002,
+								1002
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/6.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1263,
+								1263
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/7.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/Users/mattlarrabee/rails_projects/blockly-project/app/views/pages/howto/demo2.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2380,
+								2380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "blockly.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/rails_projects/blockly-project/app/assets/stylesheets/custom.css"
+			],
+			[
+				"abou",
+				"~/rails_projects/bike-project/app/views/main_pages/about.html.erb"
+			],
+			[
+				"edit",
+				"~/rails_projects/bike-project/app/views/bikes/_editshowgallery.html.erb"
+			],
+			[
+				"bike",
+				"~/rails_projects/bike-project/app/controllers/bikes_controller.rb"
+			],
+			[
+				"fo",
+				"~/rails_projects/bike-project/app/views/bikes/_form.html.erb"
+			],
+			[
+				"user",
+				"~/rails_projects/bike-project/app/models/user.rb"
+			],
+			[
+				"userc",
+				"~/rails_projects/bike-project/app/controllers/users_controller.rb"
+			],
+			[
+				"new",
+				"~/rails_projects/bike-project/app/views/users/new.html.erb"
+			],
+			[
+				"main",
+				"~/rails_projects/bike-project/app/controllers/main_pages_controller.rb"
+			],
+			[
+				"b",
+				"~/rails_projects/bike-project/app/controllers/bikes_controller.rb"
+			],
+			[
+				"scss",
+				"~/rails_projects/bike-project/app/assets/stylesheets/custom.scss"
+			],
+			[
+				"seeds",
+				"~/rails_projects/bike-project/db/seeds.rb"
+			],
+			[
+				"bi",
+				"~/rails_projects/bike-project/app/models/bike.rb"
+			],
+			[
+				"seed",
+				"~/rails_projects/bike-project/db/seeds.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
