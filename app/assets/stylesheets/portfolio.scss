@@ -1,0 +1,129 @@
+body {
+	background-color: #6ba3ff;
+}
+
+#portfolio-container {
+
+}
+
+p {
+	font-family: arial;
+}
+
+h1 {
+font-family: arial;
+	background-color: white;
+	width: 30%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+h2 {
+font-family: arial;
+	width: 100%;
+		text-align: center;
+	
+}
+
+#bike-whip-container {
+	background-color: white;
+	width: 50%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+
+	
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.bike-whip-image {
+	width: 80%;
+	position: relative;
+	left: 30px;
+}
+
+#blockly-container {
+	top: 0px;
+	position: relative;
+	float: right;
+	right: 0px;
+	background-color: white;
+	width: 50%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	h2 {
+	float: right;
+	}
+}
+
+#pebble-container {
+position: relative;
+top: 30px;
+clear: both;
+	background-color: white;
+	width: 50%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#research-container {
+top: 30px;
+	position: relative;
+	float: right;
+	right: 0px;
+	background-color: white;
+	width: 50%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	h2 {
+	float: right;
+	}
+}
+
+#scratch-container {
+position: relative;
+top: 40px;
+clear: both;
+	background-color: white;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	width: 50%;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#charity-container {
+top: 30px;
+	position: relative;
+	float: right;
+	right: 0px;
+	background-color: white;
+	width: 50%;
+	@media only screen and (max-width : 1000px) {
+		width: 100%;
+	}
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	h2 {
+	float: right;
+	}
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matt Larrabee - Portfolio</title>
+    <%= csrf_meta_tags %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div id='portfolio-container'>
+  	<h1>Matt Larrabee - Portfolio</h1>
+  	<div id='bike-whip-container'>
+  	<h2><a href="http://www.bikewhip.com">BikeWhip.com</a></h2>
+  	<a href="http://www.bikewhip.com"><%= image_tag("bikewhippic", class: 'bike-whip-image') %></a>
+  	<p> One of my favorite hobbies is building and repairing bicycles. BikeWhip is an easy way for people to share images and componenet lists of their bikes. BikeWhip is powered by the Ruby on Rails language. </p>
+  	</div>
+
+  	<div id='blockly-container'>
+  	<h2><a href="http://www.learnwithblockly.org">LearnWithBlockly.org</a></h2>
+  	<a href="http://www.learnwithblockly.org"><%= image_tag("blocklypic", class: 'bike-whip-image') %></a>
+  	<p> While working as a computer science teacher, I've realized that the mental skills formed through programming could also help students think logically and understand mathetmatics. LearnWithBlockly is a way for me to experiment with that realization, it is currently in alpha release, and is in continuing development with feedback from my students.</p>
+  	</div>
+
+  	<div id='pebble-container'>
+  	<h2><a href="https://apps.getpebble.com/en_US/application/550486f20949865a550000b2?query=pi%2520challenge&section=watchapps">PiChallenge</a></h2>
+  	<a href="https://apps.getpebble.com/en_US/application/550486f20949865a550000b2?query=pi%2520challenge&section=watchapps"><%= image_tag("pebblepic", class: 'bike-whip-image') %> </a>
+  	<p>To keep my brain sharp, I sometimes like to give myself a challenge and a deadline. In 2015, I set a goal to develop and release an app for the Pebble Watch by 3/14/15. The app was PiChallenge, which allows users to test their knowledge of Pi using their Pebble Smartwatch. Pebble uses the C programming language. As a result of developing this, I recieved a Developer Edition Pebble watch!</p>
+  	</div>
+
+	<div id='research-container'>
+  	<h2><a href="https://docs.google.com/document/d/e/2PACX-1vTxDqTC4el-qJ6mWtpUiYrWO-ECm-lJI3hQvTKwXuBqCptPK4xNtoY5UO7n6YAgeszFptm3pfYqj8P6/pub">IRB Proposal: The effect of mindfulness meditation on the emotional reaction to past memories.</a></h2>
+  	<a href="https://docs.google.com/document/d/e/2PACX-1vTxDqTC4el-qJ6mWtpUiYrWO-ECm-lJI3hQvTKwXuBqCptPK4xNtoY5UO7n6YAgeszFptm3pfYqj8P6/pub"><%= image_tag("researchpic", class: 'bike-whip-image') %></a>
+  	<p>This is a research proposal with literature review I wrote in my final year of university. Meditation is a practice I hold dear to my heart, and writing the proposal was a hugely challenging and greatly rewarding experience. </p>
+  	</div>
+
+  	<div id='scratch-container'>
+  	<h2>Scratch Content</h2>
+  	<%= image_tag("scratchpic", class: 'bike-whip-image') %>
+  	<p>My middle school computer science curriculum is based heavily on the Scratch language developed by the lifelong kindergarden lab. Here are some examples of things my students and I have developed for class: Completed Student Projects, A warm up exercise, a bug-fixing activity.</p>
+  	</div>
+
+  	<div id='charity-container'>
+  	<h2><a href="https://sites.google.com/site/bicyclesforcharityboston/">CharityBikes</a></h2>
+  	<a href="https://sites.google.com/site/bicyclesforcharityboston/"><%= image_tag("charitypic", class: 'bike-whip-image') %></a>
+  	<p>As a hobby I enjoy repairing old bikes, I also firmly believe bicycles can be a vehicle for positive social change. In 2016 I started buying fixxer upper bicycles, or taking donations, fixing them up, selling them, and giving all the proceeds ot local childrens charities. I've donated $750 in sales so far! </p>
+  	</div>
+
+
+
+
+  </body>
+
+
+</html>
