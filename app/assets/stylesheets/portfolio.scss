@@ -30,7 +30,7 @@ font-family: arial;
 
 #bike-whip-container {
 	background-color: white;
-	width: 50%;
+	width: 60%;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
@@ -52,7 +52,7 @@ font-family: arial;
 	float: right;
 	right: 0px;
 	background-color: white;
-	width: 50%;
+	width: 60%;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
@@ -66,10 +66,10 @@ font-family: arial;
 
 #pebble-container {
 position: relative;
-top: 30px;
+top: 20px;
 clear: both;
 	background-color: white;
-	width: 50%;
+	width: 60%;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
@@ -78,12 +78,12 @@ clear: both;
 }
 
 #research-container {
-top: 30px;
+top: 20px;
 	position: relative;
 	float: right;
 	right: 0px;
 	background-color: white;
-	width: 50%;
+	width: 60%;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
@@ -103,18 +103,18 @@ clear: both;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
-	width: 50%;
+	width: 60%;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
 #charity-container {
-top: 30px;
+top: 40px;
 	position: relative;
 	float: right;
 	right: 0px;
 	background-color: white;
-	width: 50%;
+	width: 60%;
 	@media only screen and (max-width : 1000px) {
 		width: 100%;
 	}
