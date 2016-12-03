@@ -1,14 +1,14 @@
 <%#PROVIDE TITLE%>
-<% provide(:title, "How-To: Puzzle 5") %>
+<% provide(:title, "How-To: Puzzle 4") %>
 
 <xml id="toolbox" style="display: none">
+  <block type="math_arithmetic"></block>
   <block type="block_2"></block>
-  <block type="math_add"></block>
 </xml>
 
 <div id="puzzle-description">
   <span class="problem-span">Problem </span>
-  <span id="desc-span"> Add 8 to the input.</span>
+  <span id="desc-span"> Split the input in half.</span>
 </div>
 
 <div id="inputDiv">
@@ -41,16 +41,16 @@
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
   
-  <%=button_to "Next Puzzle", page_path('howto/6'), method: :get, class: "demo-button"%>
+  <%=button_to "Next Puzzle", page_path('howto/5'), method: :get, class: "demo-button"%>
 </div>
 
 <div id="demoscreenDiv" class=dropScreen>
   <div id="winscreenHeaderContainer">
-    <h1 id="winscreenHeader">Sometimes you need to get creative with the blocks you are given!</h1>
+    <h1 id="winscreenHeader">You can sometimes customize blocks, try pressing the small arrow on the addition block to help solve this one.</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
   <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
-  <%=button_to "Next Lesson", page_path('howto/6'), method: :get, class: "demo-button button-hidden"%>
+  <%=button_to "Next Lesson", page_path('howto/5'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 <script>
@@ -85,10 +85,10 @@ Blockly.svgResize(workspace);
 
 var INPUT = {
     input: 0, //init a current input
-    input_array: [10] //list of test cases
+    input_array: [8] //list of test cases
  };
   var CORRECT_OUTPUT = {
-  output_array: [18], //what test case should output as
+  output_array: [4], //what test case should output as
  
  }
 
