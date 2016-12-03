@@ -9,7 +9,7 @@ function showCode() {
 
 function runCode(animMode) {
 
-  //if we don't specify no animation, or specify special animaiton, resort to default behavior which is to animate
+  //if we don't specify to skip the animation, or we don't specify a special animaiton, resort to default behavior which is to animate
   if (animMode === undefined) {
     animMode = "animate";
   }
@@ -114,7 +114,10 @@ function runAnimation(animMode) {
     var xoffset = workspace.toolbox_.getWidth() - 90;
   }
   if (animMode === "demo2") {
-    xoffset = 90;
+    xoffset = -50;
+    var yOffset = 10;
+  } else {
+    var yOffset = 0;
   };
   
   function animateExtraInputs(count) {
@@ -133,7 +136,7 @@ function runAnimation(animMode) {
     var coord = coords_arr[0];
     animateExtraInputs(count);
     //offset by count, to adjust for locations of input array spans
-    $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45) }, "slow", function() {
+    $("#input-list" + count).animate({ "left": "+="+(coord.x + xoffset), "top": "+="+(coord.y+45+yOffset) }, "slow", function() {
     $( "#input-list" + count).fadeOut("fast", function () {
     document.getElementById("input-list" + count).innerHTML = OUTPUT.output_array[count]; 
     if (OUTPUT.output_array[count] == CORRECT_OUTPUT.output_array[count]) {

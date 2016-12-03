@@ -19,7 +19,7 @@
 </xml>
 
 <xml xmlns="http://www.w3.org/1999/xhtml" id="workspaceBlocks" style="display:none">
-  <block type="output" id="U^JuZeB9v[H=c3S-ci26" x="153" y="88">
+  <block type="output" id="U^JuZeB9v[H=c3S-ci26" x="0" y="30">
     <value name="output">
       <block type="math_arithmetic" id="^pJBW[C(Gt1}[j1L|xJB">
         <field name="OP">ADD</field>
@@ -78,7 +78,7 @@
     <h1 id="winscreenHeader">In the next lesson you will solve a puzzle on your own! </h1>
   </div>
 
-  <button class="demo-button play-button" onclick="hideWinScreen()">Watch again</button>
+  <button class="demo-button play-button" onclick="hideWinScreenDemo2()">Watch again</button>
   <%=button_to "Next Lesson", page_path('howto/3'), method: :get, class: "demo-button"%>
 </div>
 
@@ -98,7 +98,7 @@ var options = {
   rtl : false, 
   scrollbars : false, 
   sounds : false,
-  zoom: {startScale: 2}
+  zoom: {startScale: 1.5}
 };
 
 var blocklyArea = document.getElementById('blocklyArea');
@@ -155,6 +155,14 @@ function hideDemoScreenDemo2() {
   setUpOutput();
   $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
 $("#run-code-button").attr("onclick","runCode(\"demo2\")");
+
+};
+
+function hideWinScreenDemo2() {
+  setUpOutput();
+  $("#winscreenDiv").animate({"top": "-=500px" }, "slow");
+  $("#run-code-button").attr("onclick","runCode(\"demo2\")");
+  
 };
 
 demoScreen();
