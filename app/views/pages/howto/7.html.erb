@@ -1,4 +1,4 @@
-<%#PROVIDE TITLE%>
+<%#Set title here%>
 <% provide(:title, "How-To: Puzzle 7") %>
 
 <%# Set available blocks to use in puzzle here, XML can be generate at https://blockly-demo.appspot.com/static/demos/blockfactory/index.html%>
@@ -7,6 +7,12 @@
   <block type="block_5"></block>
   <block type="math_arithmetic"></block>
   <block type="get_input"></block>
+</xml>
+
+<%#set starting blocks here, these will already appear in the puzzle, can generate XML using https://blockly-demo.appspot.com/static/demos/blockfactory/index.html%>
+<xml id="workspaceBlocks" style="display:none">
+  <block type="output" id="ZgBNj$P0]r,]s3)P%a%o" deletable="false" x="70" y="70"></block>
+  <block type="get_input" deletable="false" id="SviDS|Hrx/2TVF@,bshA" x="70" y="150"></block>
 </xml>
 
 <div id="puzzle-description">
@@ -44,7 +50,6 @@
     <h1 id="winscreenHeader">Puzzle Solved!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
- 
   <%=button_to "Next Puzzle", page_path('howto/7'), method: :get, class: "demo-button"%>
 </div>
 
@@ -95,24 +100,13 @@ var INPUT = {
  };
   var CORRECT_OUTPUT = {
   output_array: [5, 8, 12, 11], //correct outputs, CAN CHANGE
- 
- }
+};
 
- var OUTPUT = {
+var OUTPUT = {
   output_array: [] //init an array to store code output runs, DO NOT CHANGE
- }
+};
 
-//set starting blocks here, these will already appear in the puzzle, can generate XML using https://blockly-demo.appspot.com/static/demos/blockfactory/index.html
-var defaultXml =
-      '<xml>' +
-      '  <block type="output" deletable="false" x="70" y="70">' +
-      '  </block>' +
-      '  <block type="get_input" deletable="false" x="70" y="150">' +
-      '  </block>' +
-      '</xml>';
- var xml = Blockly.Xml.textToDom(defaultXml);
-    Blockly.Xml.domToWorkspace(xml, workspace);
-
+Blockly.Xml.domToWorkspace(document.getElementById('workspaceBlocks'), workspace);
 buildTable();
 displayInputs(); 
 demoScreen();
