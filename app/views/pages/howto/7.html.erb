@@ -1,6 +1,7 @@
 <%#PROVIDE TITLE%>
 <% provide(:title, "How-To: Puzzle 7") %>
 
+<%# Set available blocks to use in puzzle here, XML can be generate at https://blockly-demo.appspot.com/static/demos/blockfactory/index.html%>
 <xml id="toolbox" style="display: none">
   <block type="block_2"></block>
   <block type="block_5"></block>
@@ -10,6 +11,7 @@
 
 <div id="puzzle-description">
   <span class="problem-span">Problem </span>
+  <%#Set the puzzle objective here %>
   <span id="desc-span"> Add 3 to each input.</span>
 </div>
 
@@ -48,6 +50,7 @@
 
 <div id="demoscreenDiv" class=dropScreen>
   <div id="winscreenHeaderContainer">
+    <%#Set pop up window that can give user info before beginning puzzle%>
     <h1 id="winscreenHeader">This puzzle has more than one input, but you can solve it!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
@@ -87,19 +90,19 @@ onresize();
 Blockly.svgResize(workspace);
 
 var INPUT = {
-    input: 0, //init a current input
-    input_array: [2, 5, 9, 8] //list of test cases
+    input: 0, //init input var, DO NOT CHANGE
+    input_array: [2, 5, 9, 8] //list of inputs for the puzzle, CAN CHANGE
  };
   var CORRECT_OUTPUT = {
-  output_array: [5, 8, 12, 11], //what test case should output as
+  output_array: [5, 8, 12, 11], //correct outputs, CAN CHANGE
  
  }
 
  var OUTPUT = {
-  output_array: [] //init an array to store code output runs
+  output_array: [] //init an array to store code output runs, DO NOT CHANGE
  }
 
-//set starting, non-deletable, block here.
+//set starting blocks here, these will already appear in the puzzle, can generate XML using https://blockly-demo.appspot.com/static/demos/blockfactory/index.html
 var defaultXml =
       '<xml>' +
       '  <block type="output" deletable="false" x="70" y="70">' +
@@ -111,6 +114,6 @@ var defaultXml =
     Blockly.Xml.domToWorkspace(xml, workspace);
 
 buildTable();
-displayInputs(); //fill the input element with inputs
+displayInputs(); 
 demoScreen();
 </script>
