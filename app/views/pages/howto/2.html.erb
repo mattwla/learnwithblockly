@@ -68,8 +68,8 @@
   <div id="winscreenHeaderContainer">
     <h1 id="winscreenHeader">You beat LearnWithBlockly puzzles by using code. This puzzle is already solved, take a look at it, then press Run Code to see it in action! </h1>
   </div>
-  <button class="demo-button play-button" onclick="hideDemoScreen()">Take a look!</button>
-  <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
+  <button class="demo-button play-button" onclick="hideDemoScreenDemo2()">Take a look!</button>
+  <button class="demo-button play-button button-hidden" onclick="hideDemoScreenDemo2()">Watch again</button>
   <%=button_to "Next Lesson", page_path('howto/2'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
@@ -149,6 +149,13 @@ var xml = document.getElementById("workspaceBlocks");
 //Blockly.Xml.textToDom(defaultXml);
 Blockly.Xml.domToWorkspace(workspace, workspaceBlocks);
 
+
+
+function hideDemoScreenDemo2() {
+  setUpOutput();
+  $("#demoscreenDiv").animate({"top": "-=500px" }, "slow");
+$("#run-code-button").attr("onclick","runCode(\"demo2\")");
+};
 
 demoScreen();
 buildTable();

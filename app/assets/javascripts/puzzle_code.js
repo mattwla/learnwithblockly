@@ -7,8 +7,13 @@ function showCode() {
   alert(code);
 };
 
-function runCode() {
-  $("#run-code-button").attr("onclick",""); //prevent from clicking run code again during
+function runCode(animMode) {
+
+  //if we don't specify no animation, or specify special animaiton, resort to default behavior which is to animate
+  if (animMode === undefined) {
+    animMode = "animate";
+  }
+  $("#run-code-button").attr("onclick",""); //prevent from clicking run code again during processing
 
   var output = NaN;
   var rootBlock = null;
@@ -38,7 +43,11 @@ function runCode() {
     OUTPUT.output_array[i] = output;
   };
     //need to make this a choice.
+    if (animMode === "animate") {
     runAnimation();
+  } else if (animMode === "demo2") {
+    runAnimation(animMode);
+  };
 
 };
 
@@ -82,7 +91,7 @@ function winScreen() {
   $("#run-code-button").attr("onclick", "");
 }
 
-function runAnimation() {
+function runAnimation(animMode) {
   var coords_arr = []
   var blocks = workspace.getAllBlocks();
   for (var i = 0, block; block = blocks[i]; i++) {
@@ -104,6 +113,9 @@ function runAnimation() {
   } else {
     var xoffset = workspace.toolbox_.getWidth() - 90;
   }
+  if (animMode === "demo2") {
+    xoffset = 90;
+  };
   
   function animateExtraInputs(count) {
     for (var anim = 1; anim < (coords_arr.length); anim++ ) {
