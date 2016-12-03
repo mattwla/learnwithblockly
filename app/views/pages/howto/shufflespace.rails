@@ -1,0 +1,113 @@
+<%#PROVIDE TITLE%>
+<% provide(:title, "How-To: Puzzle 5") %>
+
+<xml id="toolbox" style="display: none">
+  <block type="block_2"></block>
+  <block type="math_add"></block>
+</xml>
+
+<div id="puzzle-description">
+  <span class="problem-span">Problem </span>
+  <span id="desc-span"> Add 8 to the input.</span>
+</div>
+
+<div id="inputDiv">
+  <div id="inputBorderDiv">
+    <h2 id="inputs"> Input: </h2>
+  </div>
+</div>
+
+<div id ="runCodeDiv">
+  <button id="run-code-button" onclick="runCode()">Run Code!</button>
+</div>
+
+<div id="blocklyArea">
+  <div id="blocklyDiv"></div>
+</div>
+
+<div id="outputDiv">
+  <table id="output-table">
+    <tr>
+     <th>Input</th>
+     <th>Output</th>
+     <th id="correct-th">Correct?</th>
+     </tr>
+  </table>
+</div>
+
+<div id="winscreenDiv" class="dropScreen">
+  <div id="winscreenHeaderContainer">
+    <h1 id="winscreenHeader">Puzzle Solved!</h1>
+  </div>
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
+  
+  <%=button_to "Next Puzzle", page_path('howto/6'), method: :get, class: "demo-button"%>
+</div>
+
+<div id="demoscreenDiv" class=dropScreen>
+  <div id="winscreenHeaderContainer">
+    <h1 id="winscreenHeader">Sometimes you need to get creative with the blocks you are given!</h1>
+  </div>
+  <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
+  <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
+  <%=button_to "Next Lesson", page_path('howto/6'), method: :get, class: "demo-button button-hidden"%>
+</div>
+
+<script>
+var documentWidth = $( document ).width();
+var scale = 1;
+/*if ((documentWidth < 1000) && (documentWidth > 600))  {
+  scale = 1.5;
+}*/
+var blocklyArea = document.getElementById('blocklyArea');
+var blocklyDiv = document.getElementById('blocklyDiv');
+var workspace = Blockly.inject(blocklyDiv,
+  {toolbox: document.getElementById('toolbox'), scrollbars: false, zoom: {startScale: scale}});
+var onresize = function(e) {
+// Compute the absolute coordinates and dimensions of blocklyArea.
+var element = blocklyArea;
+var x = 0;
+var y = 0;
+do {
+  x += element.offsetLeft;
+  y += element.offsetTop;
+  element = element.offsetParent;
+} while (element);
+  // Position blocklyDiv over blocklyArea.
+  blocklyDiv.style.left = x + 'px';
+  blocklyDiv.style.top = y + 'px';
+  blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+  blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+};
+window.addEventListener('resize', onresize, false);
+onresize();
+Blockly.svgResize(workspace);
+
+var INPUT = {
+    input: 0, //init a current input
+    input_array: [10] //list of test cases
+ };
+  var CORRECT_OUTPUT = {
+  output_array: [18], //what test case should output as
+ 
+ }
+
+ var OUTPUT = {
+  output_array: [] //init an array to store code output runs
+ }
+
+//set starting, non-deletable, block here.
+var defaultXml =
+      '<xml>' +
+      '  <block type="output" deletable="false" x="70" y="70">' +
+      '  </block>' +
+      '  <block type="get_input" deletable="false" x="70" y="150">' +
+      '  </block>' +
+      '</xml>';
+ var xml = Blockly.Xml.textToDom(defaultXml);
+    Blockly.Xml.domToWorkspace(xml, workspace);
+
+buildTable();
+displayInputs(); //fill the input element with inputs
+demoScreen();
+</script>
