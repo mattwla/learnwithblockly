@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is the source for the in development version of LearnWithBlockly
+Mainpage and a series of tutorial levels have been implemented
+Code is pending refactoring, some DRYness is in order
+Meat of the interesting code is in the views, comments clarify how to configure puzzles
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
