@@ -1,14 +1,29 @@
-<%#PROVIDE TITLE%>
+<%#Set title here%>
 <% provide(:title, "How-To: Puzzle 3") %>
 
+<%# Set available blocks to use in puzzle here, XML can be generate at https://blockly-demo.appspot.com/static/demos/blockfactory/index.html%>
 <xml id="toolbox" style="display: none">
-  <block type="math_arithmetic"></block>
   <block type="block_6"></block>
+  <block type="math_add"></block>
+</xml>
+
+<%#set starting blocks here, these will already appear in the puzzle, can generate XML using https://blockly-demo.appspot.com/static/demos/blockfactory/index.html%>
+<xml id="workspaceBlocks" style="display:none">
+  <block type="output" id="bN0)D_[`6X;(IQ/mgv~1" x="62" y="62" deletable="false">
+    <value name="output">
+      <block type="math_add" id="!*MlAot/]K1WBUG*}1SH" deletable="false" >
+        <value name="A">
+          <block type="get_input" id="NwJ+WlHyU=cbng|Cw:AW" deletable="false"></block>
+        </value>
+      </block>
+    </value>
+  </block>
 </xml>
 
 <div id="puzzle-description">
   <span class="problem-span">Problem </span>
-  <span id="desc-span"> Can you add six to the input?</span>
+  <%#Set the puzzle objective here %>
+  <span id="desc-span"> Add 6 to the input.</span>
 </div>
 
 <div id="inputDiv">
@@ -27,11 +42,11 @@
 
 <div id="outputDiv">
   <table id="output-table">
-		<tr>
-	   <th>Input</th>
-	   <th>Output</th>
-	   <th id="correct-th">Correct?</th>
-	   </tr>
+    <tr>
+     <th>Input</th>
+     <th>Output</th>
+     <th id="correct-th">Correct?</th>
+     </tr>
   </table>
 </div>
 
@@ -40,19 +55,22 @@
     <h1 id="winscreenHeader">Puzzle Solved!</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Stay on this puzzle</button>
+  
   <%=button_to "Next Puzzle", page_path('howto/4'), method: :get, class: "demo-button"%>
 </div>
 
 <div id="demoscreenDiv" class=dropScreen>
   <div id="winscreenHeaderContainer">
-    <h1 id="winscreenHeader">The white section is your program, it already has an input and output block. Drag in blocks from the gray section to add them to the code.</h1>
+    <%#Set pop up window that can give user info before beginning puzzle%>
+    <h1 id="winscreenHeader">This puzzle is almost solved, can you finish it?</h1>
   </div>
   <button class="demo-button play-button" onclick="hideDemoScreen()">Solve it!</button>
   <button class="demo-button play-button button-hidden" onclick="hideDemoScreen()">Watch again</button>
-  <%#=button_to "Next Lesson", page_path('howto/4'), method: :get, class: "demo-button"%>
+  <%=button_to "Next Lesson", page_path('howto/4'), method: :get, class: "demo-button button-hidden"%>
 </div>
 
 <script>
+
 var documentWidth = $( document ).width();
 var scale = 1;
 /*if ((documentWidth < 1000) && (documentWidth > 600))  {
@@ -83,30 +101,19 @@ onresize();
 Blockly.svgResize(workspace);
 
 var INPUT = {
-    input: 0, //init a current input
-    input_array: [2] //list of test cases
+    input: 0, //init input var, DO NOT CHANGE
+    input_array: [2] //list of inputs for the puzzle, CAN CHANGE
  };
-	var CORRECT_OUTPUT = {
- 	output_array: [8], //what test case should output as
- 
- }
+  var CORRECT_OUTPUT = {
+  output_array: [8] //correct outputs, CAN CHANGE
+};
 
- var OUTPUT = {
- 	output_array: [] //init an array to store code output runs
- }
+var OUTPUT = {
+  output_array: [] //init an array to store code output runs, DO NOT CHANGE
+};
 
-//set starting, non-deletable, block here.
-var defaultXml =
-      '<xml>' +
-      '  <block type="output" deletable="false" x="70" y="70">' +
-      '  </block>' +
-      '  <block type="get_input" deletable="false" x="70" y="150">' +
-      '  </block>' +
-      '</xml>';
- var xml = Blockly.Xml.textToDom(defaultXml);
-    Blockly.Xml.domToWorkspace(xml, workspace);
-
+Blockly.Xml.domToWorkspace(document.getElementById('workspaceBlocks'), workspace);
 buildTable();
-displayInputs(); //fill the input element with inputs
+displayInputs(); 
 demoScreen();
 </script>
